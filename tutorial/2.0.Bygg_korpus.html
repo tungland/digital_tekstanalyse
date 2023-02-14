@@ -1,0 +1,1802 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1.2. Korpusbygging &#8212; DH-lab dokumenter</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.3. Konkordanser" href="2.1.Konkordans.html" />
+    <link rel="prev" title="1.1. Oppstart" href="1.0.Oppstart.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">DH-lab dokumenter</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    DHLAB
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Kodeeksempler
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../tutorial.html">
+   1. Tutorials
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.0.Oppstart.html">
+     1.1. Oppstart
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.2. Korpusbygging
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.1.Konkordans.html">
+     1.3. Konkordanser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.2.Kollokasjoner.html">
+     1.4. Kollokasjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.3.Frekvenslister.html">
+     1.6. Frekvenslister
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.4.S%C3%B8k_i_aviser.html">
+     1.7. Søk i aviser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.5.n-gram_og_galakser.html">
+     1.9. N-gram og galakser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.6.sammenlign_metadata.html">
+     1.10. Sammenlign metadata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.0.ner_og_pos.html">
+     1.12. NER og POS med Spacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.1.ordparadigmer.html">
+     1.13. Ordparadigmer med wordbank
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.dispersion.html">
+     1.14. Ordfordeling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../cookbook.html">
+   2. Cookbooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">
+     2.1. Sentimentanalyse i aviskorpus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">
+     2.2. Topic modelling med gensim og dhlab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cookbook/4.2.natbib_query.html">
+     2.3. Søk Nasjonalbibliografiens metadata med dhlab
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/tutorial/2.0.Bygg_korpus.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftutorial/2.0.Bygg_korpus.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/tutorial/2.0.Bygg_korpus.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bygg-korpus-fra-boker">
+   1.2.1. 1. Bygg korpus fra bøker
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bygg-korpus-fra-metadata">
+     1.2.1.1. 1.1. Bygg korpus fra metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bygg-korpus-fra-boksok-pa-nb-no">
+     1.2.1.2. 1.2. Bygg korpus fra boksøk på nb.no
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bygg-korpus-fra-innholdsord">
+     1.2.1.3. 1.3. Bygg korpus fra innholdsord
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legg-korpuset-i-en-variabel">
+     1.2.1.4. 1.4. Legg korpuset i en variabel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ta-vare-pa-eller-rediger-korpuset-i-excel">
+     1.2.1.5. 1.5. Ta vare på eller rediger korpuset i excel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bygg-korpus-fra-aviser">
+   1.2.2. 2. Bygg korpus fra aviser
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Korpusbygging</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bygg-korpus-fra-boker">
+   1.2.1. 1. Bygg korpus fra bøker
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bygg-korpus-fra-metadata">
+     1.2.1.1. 1.1. Bygg korpus fra metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bygg-korpus-fra-boksok-pa-nb-no">
+     1.2.1.2. 1.2. Bygg korpus fra boksøk på nb.no
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bygg-korpus-fra-innholdsord">
+     1.2.1.3. 1.3. Bygg korpus fra innholdsord
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legg-korpuset-i-en-variabel">
+     1.2.1.4. 1.4. Legg korpuset i en variabel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ta-vare-pa-eller-rediger-korpuset-i-excel">
+     1.2.1.5. 1.5. Ta vare på eller rediger korpuset i excel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bygg-korpus-fra-aviser">
+   1.2.2. 2. Bygg korpus fra aviser
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="DHlab_logo_web_no_red.png" src="tutorial/attachment:DHlab_logo_web_no_red.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="korpusbygging">
+<h1><span class="section-number">1.2. </span>Korpusbygging<a class="headerlink" href="#korpusbygging" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
+<span class="kn">import</span> <span class="nn">dhlab.nbtext</span> <span class="k">as</span> <span class="nn">nb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Her viser vi ulike måter man kan bygge korpus fra NBs samling. Et korpus kan enten være et utvalg bøker, eller et utvalg aviser. Avgrensningen kan være metadata eller innhold i selve teksten.</p>
+<section id="bygg-korpus-fra-boker">
+<h2><span class="section-number">1.2.1. </span>1. Bygg korpus fra bøker<a class="headerlink" href="#bygg-korpus-fra-boker" title="Permalink to this headline">#</a></h2>
+<p>Korpuset er en definisjon av et korpus, og består av en samling URN-er.</p>
+<p>Korpuset defineres med metadata som dewey, emneord, navn , år, etc. Her kan <a class="reference external" href="http://deweysearchno.pansoft.de/webdeweysearch/index.html">Webdewey</a> være til god hjelp.</p>
+<p>For å se hvilke parametre som kan søkes på, og hva som er default-innstillinger: trykk <code class="docutils literal notranslate"><span class="pre">shift</span></code>+<code class="docutils literal notranslate"><span class="pre">tab</span></code>
+inne i parentesen.</p>
+<section id="bygg-korpus-fra-metadata">
+<h3><span class="section-number">1.2.1.1. </span>1.1. Bygg korpus fra metadata<a class="headerlink" href="#bygg-korpus-fra-metadata" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bygg et korpus fra Dewey 900 (trunkert), som et definert med emneord fiske i katalogdata</span>
+
+<span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">ddk</span><span class="o">=</span><span class="s1">&#39;9%&#39;</span><span class="p">,</span> <span class="n">subject</span><span class="o">=</span><span class="s1">&#39;fiske&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+      <th>ocr_creator</th>
+      <th>ocr_timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100060623</td>
+      <td>URN:NBN:no-nb_digibok_2011101908102</td>
+      <td>Kystbygdene i Sogn og Fjordane : frå 1700-tale...</td>
+      <td>Førsund , Finn Borgen</td>
+      <td>oai:nb.bibsys.no:998641788084702202</td>
+      <td>4f965dd5e0de2594dd222118e385e861</td>
+      <td></td>
+      <td></td>
+      <td>19860101</td>
+      <td>1986</td>
+      <td></td>
+      <td>nno</td>
+      <td>Norge / kystkultur / Lokalhistorie / sogn / fj...</td>
+      <td>948.38 / 948.38</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100281890</td>
+      <td>URN:NBN:no-nb_digibok_2009080504024</td>
+      <td>Jernaldernaust på Vestvågøy i Lofoten</td>
+      <td>Nilsen , Gørill</td>
+      <td>oai:nb.bibsys.no:999804227954702202</td>
+      <td>70720140157808e4d566b8009cba9813</td>
+      <td></td>
+      <td></td>
+      <td>19980101</td>
+      <td>1998</td>
+      <td>Institutt for arkeologi, Det samfunnsvitenskap...</td>
+      <td>nob</td>
+      <td>Naust / Jernalder / Funn / Båter / Fiske / nor...</td>
+      <td>948.4454 / 725.34</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100540874</td>
+      <td>URN:NBN:no-nb_digibok_2011060308061</td>
+      <td>Der hav møter land : fiskerbondesamfunnet i No...</td>
+      <td>Vea , Jan</td>
+      <td>oai:nb.bibsys.no:990413187064702202</td>
+      <td>fd201bc30860953874fe7f4ffb953c9a</td>
+      <td>8245000752</td>
+      <td></td>
+      <td>20040101</td>
+      <td>2004</td>
+      <td>Fagbokforl.</td>
+      <td>nob</td>
+      <td>Fiskevær / Fiske / Historikk / Norge / 1870 - ...</td>
+      <td>948.44 / 338.372</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100371721</td>
+      <td>URN:NBN:no-nb_digibok_2018042548016</td>
+      <td>Vestnorsk kystkultur - øysamfunnet Batalden. B...</td>
+      <td>Strømgren , Trond</td>
+      <td>oai:nb.bibsys.no:990937068634702202</td>
+      <td>a961ce60c3890aea8711e1592ecc9d9d</td>
+      <td>8292616012</td>
+      <td></td>
+      <td>20090101</td>
+      <td>2009</td>
+      <td>Stromgren Publ.</td>
+      <td>nno</td>
+      <td>Norge / Bygdebøker / Kultur / Samfunn / Andre ...</td>
+      <td>948.3831 / 948.3831</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100476802</td>
+      <td>URN:NBN:no-nb_digibok_2008112500070</td>
+      <td>I storlaksens rike : historien om Altaelva og ...</td>
+      <td>Eikeset , Kjell Roger / Heitmann , Kari / Niel...</td>
+      <td>oai:nb.bibsys.no:990121526254702202</td>
+      <td>9f3aa2ab37201a03dad71af4616608f4</td>
+      <td>8299585805</td>
+      <td></td>
+      <td>20010101</td>
+      <td>2001</td>
+      <td>Alta laksefiskeri interessentskap</td>
+      <td>nob</td>
+      <td>Laksefiske / Historie / Atlanterhavslaks / Kje...</td>
+      <td>948.46 / 948.4612</td>
+      <td>festschrift</td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bygg et korpus der forfatteren er Vigdis Hjorth</span>
+
+<span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">author</span><span class="o">=</span><span class="s1">&#39;Vigdis Hjorth&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+      <th>ocr_creator</th>
+      <th>ocr_timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100124477</td>
+      <td>URN:NBN:no-nb_digibok_2012121206273</td>
+      <td>Snakk til meg : roman</td>
+      <td>Hjorth , Vigdis</td>
+      <td>oai:nb.bibsys.no:991013198434702202</td>
+      <td>5329bcbfc2d5c4e7f37ccb2ea09f2435</td>
+      <td></td>
+      <td>[Oslo]</td>
+      <td>20100101</td>
+      <td>2010</td>
+      <td>Cappelen Damm</td>
+      <td>nob</td>
+      <td>norske / romaner / 2010-tallet / cuba / 2000-t...</td>
+      <td>839.823</td>
+      <td>novel</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100487905</td>
+      <td>URN:NBN:no-nb_digibok_2011050908088</td>
+      <td>Dubrovniik</td>
+      <td>Hjorth , Vigdis</td>
+      <td>oai:nb.bibsys.no:990411282064702202</td>
+      <td>363feb429461cdf09e67c4cb61e2be02</td>
+      <td>8243003258 / 8243003002</td>
+      <td></td>
+      <td>20040101</td>
+      <td>2004</td>
+      <td>Spartacus</td>
+      <td>nob</td>
+      <td>reisebeskrivelser / reiser / dubrovnik / jugos...</td>
+      <td>914.972</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100222979</td>
+      <td>URN:NBN:no-nb_digibok_2014081506013</td>
+      <td>Snakk til meg : roman</td>
+      <td>Hjorth , Vigdis</td>
+      <td>oai:nb.bibsys.no:991127107274702202</td>
+      <td>dd651ef06f2375a007bcd5d8ca9862a5</td>
+      <td></td>
+      <td>[Oslo]</td>
+      <td>20110101</td>
+      <td>2011</td>
+      <td>Cappelen Damm</td>
+      <td>nob</td>
+      <td></td>
+      <td>839.823</td>
+      <td>novel</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100434098</td>
+      <td>URN:NBN:no-nb_digibok_2021012907663</td>
+      <td>Hjulskift : roman</td>
+      <td>Hjorth , Vigdis</td>
+      <td>oai:nb.bibsys.no:999919873779602202</td>
+      <td>706d55d35aff385e191334cbe5f7a486</td>
+      <td></td>
+      <td></td>
+      <td>20170101</td>
+      <td>2017</td>
+      <td>Cappelen Damm</td>
+      <td>nob</td>
+      <td>Kjærlighet / Kjærleik / Sosial lagdeling / Sos...</td>
+      <td>839.8238</td>
+      <td>novel / text</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100152665</td>
+      <td>URN:NBN:no-nb_digibok_2013070408213</td>
+      <td>Leve posthornet! : roman</td>
+      <td>Hjorth , Vigdis</td>
+      <td>oai:nb.bibsys.no:991321173204702202</td>
+      <td>45d290098e5c91decf3696798d561a97</td>
+      <td></td>
+      <td>[Oslo]</td>
+      <td>20130101</td>
+      <td>2013</td>
+      <td>Cappelen Damm</td>
+      <td>nob</td>
+      <td></td>
+      <td>839.823</td>
+      <td>novel</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="bygg-korpus-fra-boksok-pa-nb-no">
+<h3><span class="section-number">1.2.1.2. </span>1.2. Bygg korpus fra boksøk på <a class="reference external" href="http://nb.no">nb.no</a><a class="headerlink" href="#bygg-korpus-fra-boksok-pa-nb-no" title="Permalink to this headline">#</a></h3>
+<p>Søk etter bøker på <a class="reference external" href="https://www.nb.no/search?q=">nb.no</a>, legg til <em>debugon</em> sammen med søkekriteriet. Kopier hele siden (ctrl-A) og lim inn resultatet mellom “”” … “”” nedenfor. Kommandoen som brukes er <code class="docutils literal notranslate"><span class="pre">pure_urn(&lt;tekst&gt;)</span></code> som prøver å finne URN-er i alt mulig av tekst.</p>
+<p><img alt="Skjermbilde%202019-09-17%20kl.%2010.12.11.png" src="tutorial/attachment:Skjermbilde%202019-09-17%20kl.%2010.12.11.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span><span class="o">.</span><span class="n">pure_urn</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">--- lim inn teksten her, så trekkes urn (bokas identifikator) ut i en liste:</span>
+<span class="s2">Vigdis Hjorth : et forfatterportrett</span>
+<span class="s2">Jenssen, Ruth | Biblioteksentralen</span>
+<span class="s2">1994</span>
+<span class="s2">(api)</span>
+<span class="s2">id: 7f0b021f40bf6804bca32e5b79e8d66a</span>
+<span class="s2">urn: URN:NBN:no-nb_digibok_2015090158054</span>
+<span class="s2">isDigital: true</span>
+<span class="s2">viewability: ALL</span>
+<span class="s2">allowedFrom: NORWAY</span>
+<span class="s2">contentClasses:</span>
+<span class="s2">legaldeposit</span>
+<span class="s2">bokhylla</span>
+<span class="s2">jp2</span>
+<span class="s2">Som om ingenting : bare om Vigdis Hjorth</span>
+<span class="s2">Linneberg, Arild | Hjorth, Vigdis | Solstad, Dag</span>
+<span class="s2">2009</span>
+<span class="s2">(api)</span>
+<span class="s2">id: 847bd73c3318f6874a66d0f969ba495a</span>
+<span class="s2">urn: URN:NBN:no-nb_digibok_2011051820014</span>
+<span class="s2">isDigital: true</span>
+<span class="s2">viewability: ALL</span>
+<span class="s2">allowedFrom: NB</span>
+<span class="s2">contentClasses:</span>
+<span class="s2">restricted</span>
+<span class="s2">legaldeposit</span>
+<span class="s2">jp2</span>
+<span class="s2">Leve posthornet! : Vigdis Hjorth</span>
+<span class="s2">Horn, Ellen | Riksteatret</span>
+<span class="s2">2014</span>
+<span class="s2">(api)</span>
+<span class="s2">id: e6d86eeb4ac8509533d647c9793f01dc</span>
+<span class="s2">urn: URN:NBN:no-nb_digibok_2014091948002</span>
+<span class="s2">isDigital: true</span>
+<span class="s2">viewability: ALL</span>
+<span class="s2">allowedFrom: EVERYWHERE</span>
+<span class="s2">contentClasses:</span>
+<span class="s2">public</span>
+<span class="s2">legaldeposit</span>
+<span class="s2">jp2</span>
+<span class="s2">Fryd og fare : essay om diktning og eksistens</span>
+<span class="s2">Hjorth, Vigdis</span>
+<span class="s2">2013</span>
+<span class="s2">(api)</span>
+<span class="s2">id: 5ecd6c199ff74aa7c57c2292b61df17d</span>
+<span class="s2">urn: URN:NBN:no-nb_digibok_2018031548382</span>
+<span class="s2">--- teksten er kuttet her</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;2015090158054&#39;, &#39;2011051820014&#39;, &#39;2014091948002&#39;, &#39;2018031548382&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="bygg-korpus-fra-innholdsord">
+<h3><span class="section-number">1.2.1.3. </span>1.3. Bygg korpus fra innholdsord<a class="headerlink" href="#bygg-korpus-fra-innholdsord" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s1">&#39;digibok&#39;</span><span class="p">,</span> <span class="n">fulltext</span><span class="o">=</span><span class="s1">&#39;demokrati&#39;</span><span class="p">,</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1990</span><span class="p">,</span> <span class="n">to_year</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>106</th>
+      <td>100413810</td>
+      <td>URN:NBN:no-nb_digibok_2009110204025</td>
+      <td>Arbeidslederne og arbeidslivsforskningen : en ...</td>
+      <td>Olberg , Dag</td>
+      <td>oai:nb.bibsys.no:999707019504702202</td>
+      <td>a66acf8c69166625dca184a5ffbe6225</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>19960101</td>
+      <td>1996</td>
+      <td>Forskningsstiftelsen Fafo</td>
+      <td>nob</td>
+      <td>personalledelse / arbeidsorganisering / histor...</td>
+      <td></td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>100230422</td>
+      <td>URN:NBN:no-nb_digibok_2014102338058</td>
+      <td>Kommunikasjon, symboler og begreper</td>
+      <td>Hekneby , Greta / Thorbergsen , Eli / Rasch-Ha...</td>
+      <td>oai:nb.bibsys.no:999410745444702202</td>
+      <td>002823edf5f8ee1b193e31d40753d711</td>
+      <td></td>
+      <td>[Notodden]</td>
+      <td>19940101</td>
+      <td>1994</td>
+      <td>Telemark lærerhøgskole</td>
+      <td>nob</td>
+      <td>begynnerpplæring / matematikkundervisning / le...</td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>100530097</td>
+      <td>URN:NBN:no-nb_digibok_2008090104138</td>
+      <td>Etableringen av et fond for markeds- og distri...</td>
+      <td>Emblem , Terje</td>
+      <td>oai:nb.bibsys.no:999820906334702202</td>
+      <td>e28c4969f1da2cf8d1f42abc9acf71a6</td>
+      <td>8272183951</td>
+      <td>Oslo</td>
+      <td>19980101</td>
+      <td>1998</td>
+      <td>Norsk institutt for studier av forskning og ut...</td>
+      <td>nob</td>
+      <td>fmd / forskning / forskningsfond / markedsfors...</td>
+      <td>658.80072</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>100358488</td>
+      <td>URN:NBN:no-nb_digibok_2009091501095</td>
+      <td>Alle tiders norsk : for VK 1 og VK 2 : dialekt...</td>
+      <td>Berg , Tove / Guldal , Reidunn</td>
+      <td>oai:nb.bibsys.no:999206291134702202</td>
+      <td>6ffde585a9afb3956e32261e3c2b7f51</td>
+      <td>8203137520</td>
+      <td>[Oslo]</td>
+      <td>19920101</td>
+      <td>1992</td>
+      <td>Aschehoug</td>
+      <td>nno</td>
+      <td>språkkunnskap / norsk / språk / språkhistorie ...</td>
+      <td></td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>100236748</td>
+      <td>URN:NBN:no-nb_digibok_2014120108072</td>
+      <td>Guide til sosiologi hovedfag</td>
+      <td></td>
+      <td>oai:nb.bibsys.no:999403265744702202</td>
+      <td>71e2398f16569b566d4f673c9f36cd50</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>19940101</td>
+      <td>1994</td>
+      <td>Institutt for sosiologi, Universitetet i Oslo</td>
+      <td>nob</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s1">&#39;digibok&#39;</span><span class="p">,</span> <span class="n">fulltext</span><span class="o">=</span><span class="s1">&#39;her OR kan OR du OR legge OR inn OR flere OR søkeord&#39;</span><span class="p">,</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1960</span><span class="p">,</span> <span class="n">to_year</span><span class="o">=</span><span class="mi">1980</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>80</th>
+      <td>100406421</td>
+      <td>URN:NBN:no-nb_digibok_2020060548582</td>
+      <td>Arbeidet for Nordlandsbanen 1872-1923</td>
+      <td>Kaalvik , Tor</td>
+      <td>oai:nb.bibsys.no:999919993299002202</td>
+      <td>1a0998fd030ec119ab34810a0d5fe6ad</td>
+      <td></td>
+      <td>[Trondheim]</td>
+      <td>19720101</td>
+      <td>1972</td>
+      <td></td>
+      <td>nob</td>
+      <td>jernbanehistorie / nordlandsbanen / jbvmaster</td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>100237148</td>
+      <td>URN:NBN:no-nb_digibok_2014120308141</td>
+      <td>De tre musketerer. [5] : Til siste blodsdråpe</td>
+      <td>Dumas , Alexandre / Bertelsen , Johanne / Bert...</td>
+      <td>oai:nb.bibsys.no:990226677094702202</td>
+      <td>b79339e249b6d328fca4d9986b8d3128</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>19640101</td>
+      <td>1964</td>
+      <td>Dovre</td>
+      <td>nob</td>
+      <td></td>
+      <td>843</td>
+      <td>novel</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>100164682</td>
+      <td>URN:NBN:no-nb_digibok_2013073108029</td>
+      <td>Penger i skjul</td>
+      <td>Wodehouse , P.G.</td>
+      <td>oai:nb.bibsys.no:999221266664702202</td>
+      <td>ca28659b4b4ec0c790ac8888fba95257</td>
+      <td>8203083056</td>
+      <td>Oslo</td>
+      <td>19760101</td>
+      <td>1976</td>
+      <td>Aschehoug</td>
+      <td>nob</td>
+      <td></td>
+      <td></td>
+      <td>novel</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>100360793</td>
+      <td>URN:NBN:no-nb_digibok_2017112748558</td>
+      <td>Informasjonshefte om bruk av ettergivende lysm...</td>
+      <td></td>
+      <td>oai:nb.bibsys.no:999901004994702202</td>
+      <td>86445b0f0213a11aed03f777590ee2ad</td>
+      <td></td>
+      <td>[Oslo]</td>
+      <td>19780101</td>
+      <td>1978</td>
+      <td>Vegdirektoratet, Planavdelingen</td>
+      <td>nob</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>100267999</td>
+      <td>URN:NBN:no-nb_digibok_2015091508056</td>
+      <td>Førhistoriske minne i Sunnhordland. 5 : Finnås...</td>
+      <td>Fett , Per</td>
+      <td>oai:nb.bibsys.no:999430355114702202</td>
+      <td>1ef62586af97b2c6446d2a13df91b112</td>
+      <td></td>
+      <td></td>
+      <td>19730101</td>
+      <td>1973</td>
+      <td>Historisk museum</td>
+      <td>mul / nob / nno</td>
+      <td>Prestegjeld / Lokalhistorie / Arkeologi / hord...</td>
+      <td>914.836</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="legg-korpuset-i-en-variabel">
+<h3><span class="section-number">1.2.1.4. </span>1.4. Legg korpuset i en variabel<a class="headerlink" href="#legg-korpuset-i-en-variabel" title="Permalink to this headline">#</a></h3>
+<p>Variabelen brukes til å referere til korpuset senere</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">ddk</span><span class="o">=</span><span class="s2">&quot;9%&quot;</span><span class="p">,</span> <span class="n">subject</span><span class="o">=</span><span class="s2">&quot;reindrift&quot;</span><span class="p">,</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1960</span><span class="p">,</span> <span class="n">to_year</span><span class="o">=</span><span class="mi">2020</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">korpus</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+      <th>ocr_creator</th>
+      <th>ocr_timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100388575</td>
+      <td>URN:NBN:no-nb_digibok_2018090407010</td>
+      <td>Landet bakom</td>
+      <td>Johansen , Dag Ove</td>
+      <td>oai:nb.bibsys.no:991431678204702202</td>
+      <td>0262f5f99f6bdb2e664172e04aaa7bf2</td>
+      <td></td>
+      <td>Rognan</td>
+      <td>20140101</td>
+      <td>2014</td>
+      <td>Bondes forl.</td>
+      <td>nob</td>
+      <td>Emigrasjon / Fra Norge / Emigrasjon / Fra Norg...</td>
+      <td>979.80049457 / 979.8 / 979.8004945</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100396443</td>
+      <td>URN:NBN:no-nb_digibok_2019112807031</td>
+      <td>Redningsmenn og lykkejegere : norske pionerer ...</td>
+      <td>Andersen , Roy</td>
+      <td>oai:nb.bibsys.no:991218310354702202</td>
+      <td>272f96f88d3358cf9c7dba5a4bb397e3</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>20120101</td>
+      <td>2012</td>
+      <td>Aschehoug</td>
+      <td>nob</td>
+      <td>Emigrasjon / Fra Norge / Reindrift / Historie ...</td>
+      <td>979.8 / 979</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100204423</td>
+      <td>URN:NBN:no-nb_digibok_2014050706037</td>
+      <td>Redningsmenn og lykkejegere : norske pionerer ...</td>
+      <td>Andersen , Roy</td>
+      <td>oai:nb.bibsys.no:991027951184702202</td>
+      <td>114a3c37757f0a13bcd1a8f9e1cd1fd6</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>20110101</td>
+      <td>2011</td>
+      <td>Aschehoug</td>
+      <td>nob</td>
+      <td>Reindrift / Historie / Emigrasjon / Fra Norge ...</td>
+      <td>979.8 / 979.8 / 979.8 / 979</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100472261</td>
+      <td>URN:NBN:no-nb_digibok_2010032307035</td>
+      <td>I villreinens rike : Setesdal Vesthei, Ryfylke...</td>
+      <td>Frøstrup , Johan Christian / Bang-Andersen , S...</td>
+      <td>oai:nb.bibsys.no:990001151004702202</td>
+      <td>d6e1d58a454d2c15b44d9a225d948c1d</td>
+      <td>8291495149</td>
+      <td></td>
+      <td>19990101</td>
+      <td>1999</td>
+      <td>Friluftsforl.</td>
+      <td>nob</td>
+      <td>Rein / Jakt / Landskap / Lokalhistorie / Reind...</td>
+      <td>948.3 / 799.2765</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100033339</td>
+      <td>URN:NBN:no-nb_digibok_2007072300047</td>
+      <td>Samekulturen : en kulturhistorisk oversikt</td>
+      <td>Vorren , Ørnulv / Manker , Ernst</td>
+      <td>oai:nb.bibsys.no:998421244384702202</td>
+      <td>5b68f75796d957e69cbca8e481904a33</td>
+      <td>8200050211</td>
+      <td></td>
+      <td>19760101</td>
+      <td>1976</td>
+      <td>Universitetsforlaget</td>
+      <td>nob</td>
+      <td>Samer / Kultur / Cultural Characteristics / Mi...</td>
+      <td>301.2 / 948.0049457 / 305.89457</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="ta-vare-pa-eller-rediger-korpuset-i-excel">
+<h3><span class="section-number">1.2.1.5. </span>1.5. Ta vare på eller rediger korpuset i excel<a class="headerlink" href="#ta-vare-pa-eller-rediger-korpuset-i-excel" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Korpus-variabel + .corpus + .to_csv(filnavn)</span>
+<span class="c1"># korpus.corpus.to_csv(&#39;korpus.csv&#39;, index=None)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Korpus-variabel + .corpus + .csv(filnavn)</span>
+<span class="c1"># korpus.corpus.to_excel(&#39;korpus.xlsx&#39;, index=None)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Importer korpus fra excel-dokument</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">restore_metadata_from_excel</span><span class="p">(</span><span class="s1">&#39;korpus.xlsx&#39;</span><span class="p">)</span>
+<span class="n">korpus</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>filen korpus.xlsx ble ikke funnet
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="bygg-korpus-fra-aviser">
+<h2><span class="section-number">1.2.2. </span>2. Bygg korpus fra aviser<a class="headerlink" href="#bygg-korpus-fra-aviser" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bygg korpues med 10 forskjellige aviser fra og og med </span>
+<span class="n">avis_korpus</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s1">&#39;digavis&#39;</span><span class="p">,</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1990</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">avis_korpus</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+      <th>ocr_creator</th>
+      <th>ocr_timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>203823975</td>
+      <td>URN:NBN:no-nb_digavis_hardangerfolkeblad_null_...</td>
+      <td>hardangerfolkeblad</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>19980515</td>
+      <td>1998</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>digavis</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>202854866</td>
+      <td>URN:NBN:no-nb_digavis_vaartland_null_null_2004...</td>
+      <td>vaartland</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Oslo</td>
+      <td>20040226</td>
+      <td>2004</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>digavis</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>200721907</td>
+      <td>URN:NBN:no-nb_digavis_gudbrandsdolendagnin_nul...</td>
+      <td>gudbrandsdolendagnin</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Lillehammer</td>
+      <td>20180921</td>
+      <td>2018</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>digavis</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>201521673</td>
+      <td>URN:NBN:no-nb_digavis_sandefjordsblad_null_nul...</td>
+      <td>sandefjordsblad</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Sandefjord</td>
+      <td>20111013</td>
+      <td>2011</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>digavis</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>203142429</td>
+      <td>URN:NBN:no-nb_digavis_lofotposten_null_null_20...</td>
+      <td>lofotposten</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Vågan</td>
+      <td>20081114</td>
+      <td>2008</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>digavis</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>200481470</td>
+      <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
+      <td>faedrelandsvennen</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Kristiansand</td>
+      <td>19970613</td>
+      <td>1997</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>digavis</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>200806882</td>
+      <td>URN:NBN:no-nb_digavis_helgelandarbeiderblad_nu...</td>
+      <td>helgelandarbeiderblad</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Vefsn</td>
+      <td>19950914</td>
+      <td>1995</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>digavis</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>203547755</td>
+      <td>URN:NBN:no-nb_digavis_boblad_null_null_2006110...</td>
+      <td>boblad</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>20061109</td>
+      <td>2006</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>digavis</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>203378552</td>
+      <td>URN:NBN:no-nb_digavis_porsgrunnsdagblad_null_n...</td>
+      <td>porsgrunnsdagblad</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Porsgrunn</td>
+      <td>19920918</td>
+      <td>1992</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>digavis</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>202857365</td>
+      <td>URN:NBN:no-nb_digavis_vaartland_null_null_2018...</td>
+      <td>vaartland</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Oslo</td>
+      <td>20180604</td>
+      <td>2018</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>digavis</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Tilbake til <a class="reference external" href="https://nbviewer.jupyter.org/github/DH-LAB-NB/DHLAB/blob/master/DHLAB_ved_Nasjonalbiblioteket.ipynb">DHLAB ved Nasjonalbiblioteket</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tutorial"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1.0.Oppstart.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.1. </span>Oppstart</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2.1.Konkordans.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>Konkordanser</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Nasjonalbiblioteket<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

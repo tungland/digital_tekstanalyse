@@ -1,0 +1,1099 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Setningsuttrekk &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    DHLAB
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/1.0.Oppstart.html">
+   Oppstart
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.0.Bygg_korpus.html">
+   Korpusbygging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.1.Konkordans.html">
+   Konkordanser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.2.Kollokasjoner.html">
+   Kollokasjoner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.3.Frekvenslister.html">
+   Frekvenslister
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.4.S%C3%B8k_i_aviser.html">
+   Søk i aviser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.5.n-gram_og_galakser.html">
+   N-gram og galakser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.6.sammenlign_metadata.html">
+   Sammenlign metadata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/3.0.ner_og_pos.html">
+   NER og POS med Spacy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/3.1.ordparadigmer.html">
+   1. Ordparadigmer med wordbank
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/3.2.dispersion.html">
+   Ordfordeling
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DHLAB cookbook
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">
+   Sentimentanalyse i aviskorpus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">
+   Topic modelling med gensim og dhlab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/4.2.natbib_query.html">
+   Søk Nasjonalbibliografiens metadata med dhlab
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Legacy_notebooks/7_Setningsuttrekk.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLegacy_notebooks/7_Setningsuttrekk.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Legacy_notebooks/7_Setningsuttrekk.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Setningsuttrekk</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="DHlab_logo_web_no_red.png" src="Legacy_notebooks/attachment:DHlab_logo_web_no_red.png" /></p>
+<section id="setningsuttrekk">
+<h1>Setningsuttrekk<a class="headerlink" href="#setningsuttrekk" title="Permalink to this headline">#</a></h1>
+<p>Funksjonen <code class="docutils literal notranslate"><span class="pre">nb.sentence()</span></code>kan brukes til å hente setninger fra et korpus.</p>
+<p>Korpuset må bestå av minimum 5 unike urn’er.</p>
+<p>Nedenfor er eksempler på uttrekk av setninger fra bestemte forfattere. Se eksempelfil om <a class="reference external" href="https://nbviewer.jupyter.org/github/DH-LAB-NB/DHLAB/blob/master/1_Bygg_korpus.ipynb">Korpusbygging</a> for andre måter å definere korpus.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dhlab.nbtext</span> <span class="k">as</span> <span class="nn">nb</span>
+<span class="kn">from</span> <span class="nn">dhlab.module_update</span> <span class="kn">import</span> <span class="n">css</span>
+<span class="n">css</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>@import url(
+http://fonts.googleapis.com/css?family=Lato|Philosopher|Montserrat|Source+Code+Pro|Istok+Web|Philosopher|Assistant:200,400,700);
+
+/*
+#notebook-container {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 2em;
+    color: #004f99;
+    font-weight: 600;
+}
+
+h1 { font-size: 4.5em; }
+h2 { font-size: 4em; }
+h3 { font-size: 3.5em; }
+h4 { font-size: 3em; }
+h5 { font-size: 2.5em; color:DarkSlateGray; }
+h6 { font-size: 2em; }
+
+p {
+	font-family: 'Assistant', sans-serif; 
+	font-size: 1.2em;
+	line-height: 1.4em;
+	color: black;
+}
+p code {
+	font-size:0.9em;
+}
+div.input_area {
+	border:none !important;
+	border-left:1px solid #ff851b !important
+}
+
+span.cm-keyword {
+	color:#339966 !important;
+}
+span.nn {  /*span.cm-variable, span.cm-property*/
+	color: #3399ff !important;
+}
+div.CodeMirror {
+	font-family: 'Inconsolata', monospace;
+	font-size: 1.1em;
+
+}
+</style></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Her lager vi et korpus fra 10 tilfeldig utvalgte bøker utgitt fra 2000 til 2009.</span>
+
+<span class="n">nye_bøker</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">book_corpus</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="mi">2010</span><span class="p">),</span> <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s1">&#39;nob&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Korpuset legges som parameter i nb-sentences</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">sentences</span><span class="p">(</span><span class="n">nb</span><span class="o">.</span><span class="n">pure_urn</span><span class="p">(</span><span class="n">nye_bøker</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Han er den skyldige , » hveste Karoline&#39;,
+ &#39;Kjennskap til målsettingene og målgruppene for prosjektet samlet&#39;,
+ &#39;De er 171 meter lange ( omtrent som to fotballbaner ) og veier 26 500 tonn&#39;,
+ &#39;Du skal få lese den tåredryppende historien av et brev han har sendt meg&#39;,
+ &#39;Langsomt gikk hun ned mot stranden&#39;,
+ &#39;Han tenker seg hardt om&#39;,
+ &#39;Det har likevel framkommet tydelige signaler på at Ny lokalsamfunnsorganisering kan bedres på flere områder :&#39;,
+ &#39;ZIZOU CORDER&#39;,
+ &#39;Dette må sees på som at innbyggeren likevel ser effekter seiv etter så kort tid&#39;,
+ &#39;For det andre skal resymeet presentere individets egen forestilling om sykdommen , blant annet oppfattelsen av årsaker ( forklaringsmodeller )&#39;,
+ &#39;Med et hyl av smerte slipper tigeren henne&#39;,
+ &#39;Fått bedre oversikt over situasjonen , sterke sider , problemer og utfordringer i det enkelte lokalsamfunn&#39;,
+ &#39;I åpningen til buret står en enorm bulldog oppreist på bakbeina , med flosshatt på hodet og en pisk i hånden&#39;,
+ &#39;Flere høye dyrelyder svarer på bjeff ingen , og fire mennesker , utkledd som hest , løve , sel og elefant , dukker opp innerst i buret&#39;,
+ &#39;Plutselig går døren opp og en konstabel hinker ut , han kunne sikkert gå helt fint da han kom&#39;,
+ &#39;A&#39;,
+ &#39;Det tok bare 37 minutter å fly fra Frankrike til England&#39;,
+ &#39;Hun forsøkte å se det for seg&#39;,
+ &#39;Uisolerte fasadeelementer er ofte ikke lastbærende , og fungerer kun som værhud og for å oppnå dekorative effekter i fasadene&#39;,
+ &#39;Godseiersønnen&#39;,
+ &#39;JA&#39;,
+ &#39;Men røya kaklet som før , tiuren spilte spillet til ende , og hadde&#39;,
+ &#39;Omvendt&#39;,
+ &#39;Figur A 4&#39;,
+ &#39;Hun ble så lettet at hun begynte å gråte igjen&#39;,
+ &#39;Sverre rørte seg ikke&#39;,
+ &#39;ERFARINGER MED GJENNOMFØRINGEN AV ARBEIDET I &quot; NY LOKALSAMFUNNSORGANISERING &quot;&#39;,
+ &#39;Tre hundre daler var den vel verd ; men for hans skyld fikk den gå for to , sa Peik&#39;,
+ &#39;Johannes hjalp ham med reiseveskene , og snart sto hun der i farens armer og lo og gråt om hverandre&#39;,
+ &#39;Slik kan den private sfæren skjermes mot ytterligere innsyn&#39;,
+ &#39;Til og med sånne blaute vitser&#39;,
+ &#39;Agnes greide ikke å smile&#39;,
+ &#39;En tid lurte jeg på om dere var blitt offer for trolldom&#39;,
+ &#39;Vakuum Tomt rom uten luft&#39;,
+ &#39;Skolepulten er laget av gran&#39;,
+ &#39;Samtidig kan tolk og klient ha ulik bakgrunn og kunnskap ut i fra ulik geografisk opprinnelse , ulik religiøs , sosial , kulturell og klassemessig tilhorighet&#39;,
+ &#39;Øynene hans var dype brønner av mørke , og plutselig fra dypet i disse mørke øynene , så Charlie et glimt , et skinn av lys som i øynene på et dyr , og deretter snudde mannen seg bort fra ham&#39;,
+ &#39;På bakgrunn av dette ble det utarbeidet to forskjellige spørreskjemaer&#39;,
+ &#39;Han var så sammenkrøpen og ristet slik på hendene at han nesten ikke kunne holde på pipa&#39;,
+ &#39;Men det hevet seg også kritiske røster , spesielt om språket&#39;,
+ &#39;Hun smilte altfor mye - hele tiden&#39;,
+ &#39;Men plutselig er det ingen som ler lenger , for de kan høre en annen lyd , som skremmer dem , som forvirrer dem&#39;,
+ &#39;Så husket hun&#39;,
+ &#39;Han snakker til tigeren&#39;,
+ &#39;Da han hadde forsikret seg om at de hadde satt seg og funnet seg til rette , løp han ned og pilte rundt til den smale , folksomme baktrappen for å finne plassen sin ved manesjen&#39;,
+ &#39;Merkelige mygg 7&#39;,
+ &#39;Det har generelt blitt skapt større oppmerksomhet og engasjement blant innbyggerne om utvikling av eget lokalsamfunn&#39;,
+ &#39;Functional Family Therapy : Basic Concepts and Training Program&#39;,
+ &#39;Tolk vil være rekruttert fra samme etniske gruppe og tilhører ofte det samme , tette miljø&#39;,
+ &#39;Charlie sluttet å hoppe et øyeblikk&#39;,
+ &#39;Dahl , Carl-Ivar og Pettersen , Zarin ( 1997 ) : &quot; Det tapte språk - Tolking i psykososialt og psykoterapeutisk arbeid med flyktninger &quot;&#39;,
+ &#39;Var hun sarkastisk&#39;,
+ &#39;Og hvordan skal du feire jula&#39;,
+ &#39;Han visste hva de skulle gjøre , for han hadde sett det mange ganger på trening&#39;,
+ &#39;Så tok hun det ut av veven , stampa det og skar det til , og sydde klær av det til mannen sin , og da de var ferdige , hengte hun dem opp på stabbursloftet&#39;,
+ &#39;Hvis han noensinne kommer til å bruke beina sine ,&#39;,
+ &#39;Den tar han med seg , men på vei ut stanser han ved rommet sitt&#39;,
+ &#39;Det kan derfor være&#39;,
+ &#39;Plutselig snur Ruby seg mot ham og stikker ut tungen&#39;,
+ &#39;Han er ikke din sønn , Jens , uansett hva du sier&#39;,
+ &#39;Signatur :&#39;,
+ &#39;ENKESØNNEN&#39;,
+ &#39;I framtiden vil nok ikke togene trenge&#39;,
+ &#39;En undersøkelse fra Danmark viser at barnevernet i liten grad legger til rette for at barn fra etniske minoriteter skal oppleve kulturell&#39;,
+ &#39;Dette er forsøkt illustrert i Figur 2&#39;,
+ &#39;Pil nummer to treffer ham i den høyre rumpeballen , og så er det Lillys tur&#39;,
+ &#39;Pickering ( 2003 )&#39;,
+ &#39;Uthult kano Kano lagd ved uthuling av en stor trestamme&#39;,
+ &#39;Var det ikke så , Berthe&#39;,
+ &#39;Heltinnen Lilly 41&#39;,
+ &#39;Det finnes også forskjellige systemer med stålkonsoller for bjelker og fasader som i mange tilfelle gir en helt skjult knutepunktsdetalj&#39;,
+ &#39;Far din var den beste lagrettemannen vi noen gang har hatt her på Jæren&#39;,
+ &#39;Så måtte han ha ei nisteskreppe ; den gjorde de av femten oksehuder og stappet den full med mat , og så lakket han nedover bakken , med skreppa på ryggen og klubba på nakken&#39;,
+ &#39;Ytterligere økning av brannmotstandstiden ut over det man kan oppnå ved endringer i tverrsnitt og spenntauplassering , kan oppnås ved isolering på undersiden&#39;,
+ &#39;Herman kikker etter ham&#39;,
+ &#39;Knut pratet over seg&#39;,
+ &#39;Det å tenke i etniske kategorier blir møtt med flere innvendinger i Frankrike enn i mange andre land , og fikk ikke noe særlig omfang før på 1990 - tallet ( Costa-Lascoux 2001 )&#39;,
+ &#39;Dere&#39;,
+ &#39;Han ville ikke fortelle det&#39;,
+ &#39;Han hadde i hvert fall ikke kjørt med ødelagt vogn , for hun visste at Torstein og Mons alltid saumfor alt utstyr som ikke hadde vært i bruk på en stund&#39;,
+ &#39;Spørsm ålsform uleringer&#39;,
+ &#39;Spesielt kan det lett bli svært subjektive oppfatninger når man diskuterer toleranser på overflater&#39;,
+ &#39;Men stormen&#39;,
+ &#39;Studien omfatter en lang rekke skolebaserte intervensjonsformer med tormål å forebygge og a redusere verbal og fysisk aggressiv åtferd&#39;,
+ &#39;Det finnes ulike tiltak for å hindre at barn blir eksponert for vold samt tiltak for å hjelpe voldsofre&#39;,
+ &#39;KAPITTEL ÅTTE ROMFARTØYER&#39;,
+ &#39;I intervjuene ble det uttrykt at representantene fra prosjektledelsen ivaretar rollen som &quot; toveis &quot; formidlere godt og at derfor ikke er behov for politikere i utvalgene&#39;,
+ &#39;Foran dem lå stedet der kanalen møtte elven og selve elven , som de måtte krysse for å komme til stasjonen&#39;,
+ &#39;Vi bare ligger her&#39;,
+ &#39;Så går han inn til frisøren&#39;,
+ &#39;Hun peker med fingeren mot plassen ved siden av dem , der det står et sirkustelt i mange farger , omgitt av mindre telt og vogner&#39;,
+ &#39;Øynene hans blir mørke som Svartehavet&#39;,
+ &#39;Det var virkelig ikke vår dag&#39;,
+ &#39;LS SL&#39;,
+ &#39;Forsiktig blunker hun med det ene øyet&#39;,
+ &#39;Charlie ble taus&#39;,
+ &#39;Det foreligger ikke forskningmessig belegg verken for å anbefale eller fraråde bruken av spesielle programmer eller metoder rettet mot ikke-vestlige innvandrere&#39;,
+ &#39;Erik gjorde så , og for i sprekken med begge nevene og brøt alt han orket ; men med det samme slo Mumle Gåsegg ut bleien , så satt Gamle-Erik i klemma ; siden prøvde han øksehammeren på ryggen hans&#39;,
+ &#39;Johannes har godt lag med barn&#39;,
+ &#39;Hun måtte være sterk&#39;,
+ &#39;Innledende intervjuer med henholdsvis prosjektledelsen , den tverrsektorielle prosjektgruppen og lederne av lokalsamfunnsutvalgene ga en generell forståelse av Ny lokalsamfunnsorganisering slik den er erfart så langt i de forskjellige enhetene samt innspill til opplegget til spørreundersøkelsen&#39;,
+ &#39;Men det er det jo også , hun reddet livet hennes den gan-&#39;,
+ &#39;På norsk vil ordet kunne oversette med det nokså gammelmodige &quot; bemyndigelse &quot;&#39;,
+ &#39;Den andre uken etter fødselen kom Jess og Adam på barselvisitt&#39;,
+ &#39;Bugatti Royale 45 busser 91&#39;,
+ &#39;Da han skulle besøke henne , hadde vesle Åse Gåsepike satt seg i veien for ham igjen&#39;,
+ &#39;Moren kommer til syne med trette øyne og sot i ansiktet&#39;,
+ &#39;Var det modig&#39;,
+ &#39;Men Lilly reagerer lynkjapt&#39;,
+ &#39;Alt sølvtyet stod på bordet ennå ; men all gjestebudskosten var blitt til masa og sopp og kumøkk og padder og loppetusser og anna slikt&#39;,
+ &#39;Han var en av bøndene som var satt til å være fangevokter mot sin vilje , og bare ønsket å få det overstått og komme hjem til garden sin&#39;,
+ &#39;Følgende svar ble gitt i forhold til spørsmål nr 17 for prosjektdeltakere og nr&#39;,
+ &#39;Gunvor strøk henne over håret igjen mens tårene piplet frem i øyekroken&#39;,
+ &#39;Ingen ville kjenne ham igjen når han gikk om bord , og ingen ville finne ut hvem han var før båten var langt til havs&#39;,
+ &#39;Torgrim&#39;,
+ &#39;Mellomlegg på opplegg sentrerer vertikallaster , hindrer kantskader og utjevner trykkspenninger , og bør derfor alltid benyttes&#39;,
+ &#39;Fredrikstad kommune&#39;,
+ &#39;Ca 24 % , kjenner de godt&#39;,
+ &#39;Med revebelgen og børsa på nakken og skistaven i handa glei jeg av sted&#39;,
+ &#39;Halespissen hans brenner&#39;,
+ &#39;FØRSTE BIND&#39;,
+ &#39;Kunne han ta sjansen på å si noe om sirkuset&#39;,
+ &#39;Det har ført til bedre informasjon fra kommunen til lokalsamfunnene&#39;,
+ &#39;Hvis vedkommende tolker for eksempel for kolleger , og for innkalte eksperter ( for eksempel psykologer ) , vil det være vanskelig å skille når den to-språklige snakker på egne vegne og når han / hun snakker på andres vegne&#39;,
+ &#39;TT-løp foregår også mange andre steder på avsperrete veier&#39;,
+ &#39;Jeg er fullt arbeidsfør , og vi kan avse Ranveig innimellom&#39;,
+ &#39;Hun likte ikke måten saken ble lagt frem på&#39;,
+ &#39;Som ny abonnent får du første bok gratis&#39;,
+ &#39;Fugearmcring&#39;,
+ &#39;Hva for en historie er dette&#39;,
+ &#39;Men motviljen , vemmelsen , kvalmen , Seiv sin egen kropp følte hun vemmelse for&#39;,
+ &#39;Du skal heller ikke være nødt til å bo der&#39;,
+ &#39;I et nytt jenteprosjekt ble det satt sterkere fokus på jenter med større behov for omsorg og pedagogisk støtte&#39;,
+ &#39;Han kikket inn gjennom vinduet : Han kunne ikke se stort i mørket , men han så ingen bevegelser, ingen tegn til liv&#39;,
+ &#39;Hun måtte stole på denne kvinnen&#39;,
+ &#39;Hvis det skal sitte politikere i utvalgene , er det klart fordelaktig at disse sitter i kommunestyret&#39;,
+ &#39;Det var den første motorsykkelen med en lett bensinmotor , men den gikk ikke fort&#39;,
+ &#39;Denne forståelsen er ikke godt nok forankret i lokalsamfunnene&#39;,
+ &#39;Hvordan kan du tenke slik&#39;,
+ &#39;I ( jTU | Utrolig&#39;,
+ &#39;Betongelementer til tak og dekker&#39;,
+ &#39;Syklene og fotballstøvlene er forlengst tatt bort , lengdeløpsskøytene er allerede på plass&#39;,
+ &#39;Før de rekker å reise seg opp igjen , glir noen truende skygger over dem&#39;,
+ &#39;Metodeproblemet oppstår fordi Head Start er valgt av foreldrene ( mødrene )&#39;,
+ &#39;Lien peker på at dette i noen grad kan ha sammenheng med at helsevesenet oftere får kontakt med problemet gjennom de mange medisinske senvirkningene av kjønnslemlestelse&#39;,
+ &#39;Da de hadde lagt seg om kvelden , spurte kongsdattera igjen hvor hjertet hans var , for hun holdt så mye av ham at hun nok gjerne ville vite det , sa hun&#39;,
+ &#39;Mørket begynner allerede å falle fra himmelen , Frognerkilen går i ett med Bygdøy og utover fjorden har bølgene hvite horn som stanger og stanger&#39;,
+ &#39;En flukt&#39;,
+ &#39;Utsparinger i elementene hugges normalt i rå betong umiddelbart Figur A 7&#39;,
+ &#39;Lydegenskaper for etasjeskillere med lettklinkerelementer&#39;,
+ &#39;Det foreligger forslag om følgende forhold :&#39;,
+ &#39;Figur A 4&#39;,
+ &#39;ØSTENFOR SOL OG VESTENFOR MÅNE&#39;,
+ &#39;Redefinere mål og hovedoppgaver&#39;,
+ &#39;Evalueringen gir oppslag til forbedringstiltak innen følgende områder :&#39;,
+ &#39;Oversatt av Marte Gresvik&#39;,
+ &#39;Derfrå gikk hun ut i fjøset , såtte seg på en mjølkekrakk , lente hodet inn mot den varme buken til yndlingskua Branna , og brast i sår , fortvilet gråt&#39;,
+ &#39;Borte i ovnskråbenken lå Ola og sov tungt&#39;,
+ &#39;H - 4 &gt; | i * $ M i } nr&#39;,
+ &#39;Du verden så lik han var blitt far sin&#39;,
+ &#39;For foreldrene hadde nemlig ikke råd til ordentlig parykk til ham&#39;,
+ &#39;Et viktig moment framkommet i intervju med prosjektdeltakere er at mye arbeid ligger i utvalgslederfunksjonen&#39;,
+ &#39;Delte vegger \\ a &quot; \&#39; &amp; \&#39; mmimumsaime ^ &amp; to ,&#39;,
+ &#39;I mellomtiden er de kommet fram til buret , og der stopper herr Lojal helt&#39;,
+ &#39;Rasmus var en høy , svær mann med brunbarket og værbitt ansikt&#39;,
+ &#39;For et par av de andre organisasjonene var så godt som alt arbeid konsentrert om dialog og diskusjon&#39;,
+ &#39;Hva gjorde den første satellitten&#39;,
+ &#39;A 7 Elementtyper og tekniske data&#39;,
+ &#39;I , T 4 - knOiSP&#39;,
+ &#39;Kurvene i diagrammet er omtrentlige , og forutsetter at elementenes vekt tillater en rimelig god utnyttelse av bilens eller jernbanenvognens lasteevne&#39;,
+ &#39;Derimot liten forankring i politikkutforming&#39;,
+ &#39;Charlie , som var beruset av den spennende opplevelsen, av den søtlige , støvete lukten i rommet og av at han var omgitt av løver han kunne prate med , kom ikke på en eneste fornuftig ting å si&#39;,
+ &#39;De finner en ved Solli plass&#39;,
+ &#39;Enge fra todekkerne sine etter lot også publikum få være med en&#39;,
+ &#39;Det var ingen dobbeltgjenger&#39;,
+ &#39;Hun frøs enda så feberhet hun var&#39;,
+ &#39;Kanskje hun kan fortelle oss hvordan vi skal komme oss hjem igjen&#39;,
+ &#39;Grisen og levemåten hans&#39;,
+ &#39;Det duftet daglig av deilig kakebakst fra kjøkkenet , og Karoline begynte så smått å få matlysten tilbake&#39;,
+ &#39;Vanlige tykkelser for uisolerte påhengsvegger&#39;,
+ &#39;Det er kaldt og stille , det lukter gamle matpakker og tørre svamper&#39;,
+ &#39;Så henter han Glenn , Karsten og Bjørnar , heiser dem opp og ned før han bestemmer seg for å slippe alle tre i samme skål på skoledassen&#39;,
+ &#39;Halvan hadde allerede nektet å komme inn i lugaren deres flere ganger&#39;,
+ &#39;Ferdesmannen gikk til senga , og der lå en gammel , gammel kall , som det ikke var noe annet levende å se på enn et par store øyne&#39;,
+ &#39;Jeg prøvde å forklare ham at det er for å spare deg at vi ikke har meldt ham til lensmannen , og at Knut har truet deg på livet hvis du sier noe&#39;,
+ &#39;Jeg holder på med et prosjekt om huskatter&#39;,
+ &#39;Der kan vi pusse tennene før vi legger oss&#39;,
+ &#39;Chand fremhever en studie av Brophy et al&#39;,
+ &#39;Vi banket på , men det kom ingen og lukket opp&#39;,
+ &#39;Hadde det bare vært så vel&#39;,
+ &#39;Dere kommer fra et land langt borte&#39;,
+ &#39;Lensmann Samuel Watne beordret bøndene til å gå manngard etter ham , men ingen Knut var å finne&#39;,
+ &#39;Da han hadde gått et stykke , fant han et skrin&#39;,
+ &#39;Det er tydelig at de to vennene alt lenge har vært klar over sine felles interesser og snakket sammen om eventyr , viser og sagn&#39;,
+ &#39;Som oftest er den spiss for lettere å pløye gjennom vannet&#39;,
+ &#39;Det presiseres at denne evalueringen er foretatt i lys av at Ny lokalsamfunnsorganisering har pågått ca&#39;,
+ &#39;Duften av gyllengult smør som smeltet på ristet brød&#39;,
+ &#39;Sfc&#39;,
+ &#39;Dato : 30&#39;,
+ &#39;Sentrale elementer i denne planen er å ruste opp kompetansen ved utvalgte familiekontor , barnevern , barn- og ungdomspsykiatri , helsestasjoner samt krisesentre&#39;,
+ &#39;Lyden har en hastighet på 1225 km / t&#39;,
+ &#39;Hun hadde vært nære på både den natten i bekken og under feberen etterpå&#39;,
+ &#39;Han fulgte ikke etter henne&#39;,
+ &#39;Charlie 10&#39;,
+ &#39;Da han hadde begynte å kle av seg og stod i skjorteermene borte i skorsteinen og skulle tenne kveldspipa si med en brann , så kom det inn et følgje av store og små , så det yrte og krydde&#39;,
+ &#39;Men idet han skal til å kaste det mot heltene våre , blir han brått stanset av at en bitte liten stemme roper « Stoooopp&#39;,
+ &#39;Vi forutsetter at bøkene benyttes av kompetente , fagkyndige ingeniører med forståelse for begrensningene og de forutsetninger som alltid må legges til grunn , og at det anvendes sunn , ingeniørmessig dømmekraft ved vurdering av de resultater som er en konsekvens av bruken av innholdet i bøkene&#39;,
+ &#39;Lysene blir tent i butikken og de kan høre amerikansk musikk fra bakrommet&#39;,
+ &#39;Tiltrekningskraft mellom&#39;,
+ &#39;Han klarte ikke å få fram ordene , men nikket svakt&#39;,
+ &#39;Frihet&#39;,
+ &#39;Klar&#39;,
+ &#39;De så på Gunvor&#39;,
+ &#39;Rakettflyet X-15&#39;,
+ &#39;Hulrommet mellom betongskivene vil normalt bli utstøpt&#39;,
+ &#39;Så stabler han ølflasker i en eske , mens han ser en annen vei , og plasserer et vissent salathode på toppen&#39;,
+ &#39;Så løper de inn i oppgangen&#39;,
+ &#39;Tvangsekteskap har i enkelte sammenhenger blitt sett som religiøst betinget praksis&#39;,
+ &#39;Deretter sier han til kollegaen sin :&#39;,
+ &quot;Men som vi satt slik , så hørte vi et forferdelig rabalder ute i kjøkkenet , &#39; sa hun , &#39; det var liksom én slo alle tallerkenene sammen og kastet dem på golvet&quot;,
+ &#39;Den er perfekt for langturer&#39;,
+ &#39;Det var&#39;,
+ &#39;Dette gjorde jeg ; han skaff et meg en levende orm , som vi truet inn i børsepipa ; jeg skjøt den ut mot låveveggen ; og merkelig nok , det var ikke annet å se av den enn en våt flekk&#39;,
+ &#39;Figurene A 4&#39;,
+ &#39;Madam Zaza 35&#39;,
+ &#39;Vanlige forskriftskrav kan oppfylles direkte ved bruk av hulldekker&#39;,
+ &#39;Charlie følte seg dårlig&#39;,
+ &#39;Dom var itte seine før dom fekk ei gryte på peisen og til å legge på under , så det tok til å brase og frase i gryta , som om hu var full av kokandes bek og tjære&#39;,
+ &#39;Generell litteratur&#39;,
+ &#39;Men harene skjente fra ham , bort over alle haugene&#39;,
+ &#39;Dette gjelder for alle involverte aktører i prosjektet&#39;,
+ &#39;Rufsejente&#39;,
+ &#39;BS ~ T \\ JA - Man g e ATVer ( All Terrain Vehicles ) har tre i I W hjul&#39;,
+ &#39;Han river av papiret og åpner esken&#39;,
+ &#39;Dette har dels med behandlernes holdning å gjore - åpenhet for forskjeller og evne og vilje til gjensidig læring er viktig i en flerkulturell kontekst&#39;,
+ &#39;Du er stygg&#39;,
+ &#39;Francis senket pistolen , og ballerinaen sa det var best de tok ham med opp&#39;,
+ &#39;Hvorfor har du ikke hår&#39;,
+ &#39;Inn i landet&#39;,
+ &#39;Hun ville sove ved siden av ham , men denne senga var for smal for dem begge&#39;,
+ &#39;Liten last , lett tak&#39;,
+ &#39;ZIZOU CORDER&#39;,
+ &#39;Lea kunne se at datterens øyne virket altfor store i det bleke ansiktet ; de var mørke av engstelse , men de lyste av takknemlighet og gjensynsglede&#39;,
+ &#39;Det passet seg ikke , sa han&#39;,
+ &#39;P I : I&#39;,
+ &#39;Hun vet det jo ikke , prøvde hun å forsvare , men et agg ble sittende igjen likevel&#39;,
+ &#39;Barnet er av en annen natur enn andre barn , for eksempel ved at det er utpekt til å bli guddommelig&#39;,
+ &#39;Charlie sarte seg på baktrappen&#39;,
+ &#39;Tegning fra leverandør&#39;,
+ &#39;Da kan det hende at man ikke bare finner en mark , men en halv mark&#39;,
+ &#39;Zaza - ekstra klarsynt&#39;,
+ &#39;En prestehistorie side 127&#39;,
+ &#39;Hun nikker mens den falske koalabjørnen måler den forskrekkede tigeren opp og ned med øynene&#39;,
+ &#39;Stikk ned en dag etter skoletid når det er bra vær&#39;,
+ &#39;Fota&#39;,
+ &#39;Dette begrunner vi med at undersøkelsen bygger på et bredt datagrunnlag ; to spørreundersøkelser , to intervjurunder med de 3 prosjektdeltakergruppene ( ca&#39;,
+ &#39;Et stille før stormen&#39;,
+ &#39;Bård så motvillig på henne&#39;,
+ &#39;Alle hadde en krangel med kjæresten en gang i blant , men det var vel ikke noe å belemre andre med&#39;,
+ &#39;Man kan sette opp en dikotomi med selvstendighet på den ene siden og lydighet på den andre&#39;,
+ &#39;Innersøyle&#39;,
+ &#39;Får de gode kår , gjør de en god jobb&#39;,
+ &#39;Hun lyste over tunet , forbi ildhuset og steinhaugen og var snart ute i åpent terreng&#39;,
+ &#39;Redefinere mål og hovedoppgaver&#39;,
+ &#39;Isolasjonstykkelsen vari erer&#39;,
+ &#39;I tillegg må spesielle krav som farge&#39;,
+ &#39;Mønehøyde Maks&#39;,
+ &#39;Tigeren forter seg å låse etter dem&#39;,
+ &#39;Det&#39;,
+ &#39;Men denne lille køya var virkelig svært behagelig og så vidunderlig ren&#39;,
+ &#39;Begge kommer inn på rommet hans og faren tryller med kastanjene , og han tryller så hardt at to blir borte&#39;,
+ &#39;Framtidens soldrevne biler vil kanskje se ut slik som bilen under med solpanel på taket&#39;,
+ &#39;Utrolig&#39;,
+ &#39;I den grad det eksisterer evalueringer , gjennomføres de ofte i forbindelse med at et tiltak iverksettes&#39;,
+ &#39;Da bøyer plutselig faren seg fram og har noe i hendene&#39;,
+ &#39;Det er så mye å gjøre før jul , vet du&#39;,
+ &#39;Men vi gjør ikke noe&#39;,
+ &#39;I barnevernet har de kunnet spre forståelse for barnevernets arbeidsmåter , og det er etablert støttetiltak i familier som i utgangspunktet var skeptiske til å ha kontakt med barnevernet&#39;,
+ &#39;Jeg vil gjerne be dere om å undersøke Storholts forbindelse med Erlend Fredriksen&#39;,
+ &#39;Da de kommer ned på gaten , er Herman like ved å gå rett under en stige&#39;,
+ &#39;Han hadde fotfulgt faren i dagevis for å finne ut hvor han gjemte nøkkelen, men uten å lykkes&#39;,
+ &#39;Kortere byggetid betyr&#39;,
+ &#39;Også i området Nedre Grunerløkka ( Eika-miljøet ) er det registrert en økning i andel ikke-vestlige ungdommer ( Kuvoame and Dugstad 2005 )&#39;,
+ &#39;Hvordan blir damp til&#39;,
+ &#39;Du kan sette deg opp på ryggen min , så skal jeg bære deg dit&#39;,
+ &#39;Alle moderne jetmotorer er sikret&#39;,
+ &#39;Bibliotek&#39;,
+ &#39;Ambisjonsnivået i forhold bærekraftig utvikling kan synes å ha vært for høye i prosjektet&#39;,
+ &#39;Å vite alt&#39;,
+ &#39;Man skal bare drikke colaen først&#39;,
+ &#39;Figur viser prosentvis fordeling mellom de tre gruppene prosjektdeltaker for de som har svart &quot; Klare og konkrete &quot;&#39;,
+ &#39;Innersøyle&#39;,
+ &#39;Han blunket muntert til Charlie&#39;,
+ &#39;Inne i vogna er alt delvis skjult i et halvmørke&#39;,
+ &#39;J ohn Glenn&#39;,
+ &#39;Peder på vandring side 229&#39;,
+ &#39;I : Skygge over Slettelandet , kr&#39;,
+ &#39;Til tross for at de blir litt fornærmet&#39;,
+ &#39;Det så ut til at noen greide å tyde dem ; men andre stod lenge og grunnet og ristet betenkt på hodet ; oppgaven var nok for vanskelig for dem&#39;,
+ &#39;Har syklister rustning&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mykle</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">book_corpus</span><span class="p">(</span><span class="n">author</span><span class="o">=</span><span class="s1">&#39;%Mykle%Agnar%&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s1">&#39;nob&#39;</span><span class="p">)</span>
+<span class="n">mykle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>urn</th>
+      <th>author</th>
+      <th>title</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2009062900060</td>
+      <td>Mykle, Agnar</td>
+      <td>Noveller II</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2008022200094</td>
+      <td>Mykle, Agnar</td>
+      <td>Tyven, tyven skal du hete</td>
+      <td>1995</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2008112400022</td>
+      <td>Mykle, Agnar</td>
+      <td>Kjære lille Moff</td>
+      <td>2001</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2016020808126</td>
+      <td>Mykle, Agnar</td>
+      <td>Sangen om den røde rubin</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2008072504129</td>
+      <td>Mykle, Agnar</td>
+      <td>Samlede noveller</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2008021104057</td>
+      <td>Mykle, Agnar</td>
+      <td>Samlede verker</td>
+      <td>1994</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2008033104009</td>
+      <td>Mykle, Agnar</td>
+      <td>Rubicon</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2013092407023</td>
+      <td>Mykle, Agnar</td>
+      <td>Lasso rundt fru Luna</td>
+      <td>1966</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2009033100094</td>
+      <td>Mykle, Agnar</td>
+      <td>Sangen om den røde rubin</td>
+      <td>2002</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2009062400001</td>
+      <td>Mykle, Agnar</td>
+      <td>Lasso rundt fru Luna</td>
+      <td>1998</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span><span class="o">.</span><span class="n">sentences</span><span class="p">(</span><span class="n">nb</span><span class="o">.</span><span class="n">pure_urn</span><span class="p">(</span><span class="n">mykle</span><span class="p">),</span> <span class="n">num</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Han står et sekund , vrir på knasten for å dreie neste bilde frem&#39;,
+ &#39;Hvorfor spør hun ikke videre , tenkte han&#39;,
+ &#39;S&#39;,
+ &#39;Gutten fikk hjertet i halsen , han visste ikke annet enn å føre mannen inn i stua og plasere ham i en lenestol ; det ble et mørkt får over gulvet efter de våte sjøstøvlene&#39;,
+ &#39;Det kunne ha vært helt oppe i kirketaket&#39;,
+ &#39;For er ikke hele slottet Taj Mahal bygget av hvitt marmor av en egen , edel slags , av hvitt marmor med blå årer i&#39;,
+ &#39;Fire var&#39;,
+ &#39;Hun pusset sine bakkenbarter, slikket seg med en lang og rosa tunge nedover det sorte brystet , strakte seg atter&#39;,
+ &#39;Merk deg betegnelsen , gutt&#39;,
+ &#39;Poppi snudde hodet og så på Ask , hun blunket med de vippeløse øyenlokk som om hun hadde vanskeligheter med å huske hvem dette individ var , sukket , og sa ja ja&#39;,
+ &#39;Det var en stor kran , av solid messing&#39;,
+ &#39;En liten sverting her , og en liten sverting der , det kan bli en hel liten flekk til slutt , det&#39;,
+ &quot;Hun holder ut med meg en halv time - jeg har hele tiden ikke gjort annet enn gryntet et par hm &#39; er nede i skjerfet - men så retter hun seg , tydeligvis fornøyd for denne gang , trykker heftig min hånd og uttrykker sin store glede over den morsomme og høyst interessante samtale hun har hatt med meg&quot;,
+ &#39;Vi har gode idrettsmenn , gode skiløpere , gode husmødre, gode elskerinner , gode arkitekter , gode kokker og gode gartnere , og vi kan ennå kunsten å marsjere mot det målet vi har satt oss&#39;,
+ &#39;Som om hun hadde en uforklarlig rett til ham , som om hun kunne kommandere ham til kjærlighet&#39;,
+ &#39;Andre gangen banket han så hårdt at det ga gjenklang i hele korridoren , han slo attpåtil to slag i hastig rekkefølge&#39;,
+ &#39;Han svarte med bare ett ord&#39;,
+ &#39;Han visste ikke hva han hadde ventet seg av kvelden , han visste bare at det var ikke dette&#39;,
+ &#39;De to i salongen var eldre damer , korrekte , selvsikre , de konverserte Ask en smule tvungent om hans tur&#39;,
+ &#39;Agnar mykle * 2 min&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sandel</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">book_corpus</span><span class="p">(</span><span class="n">author</span><span class="o">=</span><span class="s1">&#39;Sandel%Cora%&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">sandel</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>urn</th>
+      <th>author</th>
+      <th>title</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2008072900097</td>
+      <td>Sandel, Cora</td>
+      <td>Alberte og Jakob</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2008020701096</td>
+      <td>Sandel, Cora</td>
+      <td>Lykken og andre noveller</td>
+      <td>1995</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2008102000008</td>
+      <td>Sandel, Cora</td>
+      <td>Fortellinger i utvalg</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2012052905120</td>
+      <td>Sandel, Cora</td>
+      <td>Sandels beste</td>
+      <td>2006</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2011112508084</td>
+      <td>Sandel, Cora</td>
+      <td>Alberte og Jacob</td>
+      <td>1953</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Her legger vi setningene i en variabel som vi kan arbeide videre med</span>
+
+<span class="n">sandel_setn</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">sentences</span><span class="p">(</span><span class="n">nb</span><span class="o">.</span><span class="n">pure_urn</span><span class="p">(</span><span class="n">sandel</span><span class="p">),</span> <span class="n">num</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">sandel_setn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Han var Lettas fetter , hadde tatt artium , kaltes student&#39;,
+ &#39;Der er den Alberte , sier fru Selmer åndeløst : skynd deg — pappa , Jensine , fullmektigen — de må komme straks&#39;,
+ &#39;Men det skulle Jakob ikke sagt&#39;,
+ &#39;Hvad skal nu det bety&#39;,
+ &#39;Før han nådde frem til henne falt hun sammen på trappesteinen og gråt så hun ristet&#39;,
+ &#39;Snart er det som det kom nedover kaien , snart som det var lenger borte&#39;,
+ &#39;I novellen « Lykken » er kvinnens store drøm i livet å få lov til å danse&#39;,
+ &#39;Som dradd av en magnet kommer han i tidens fylde til henne og er hennes&#39;,
+ &#39;Med de spinkle armene tvunnet fast om halsen på ham , hvisker hun små , usammenhengende , tåpelige , ømme ord som strømmer over hennes leber i fleng , i lang , übrutt rekkefølge , mens hennes kropp krymper seg i varmen fra hans&#39;,
+ &#39;På de andre veiene er menneskene — her oppe er uhyggen&#39;,
+ &#39;Dag i november&#39;,
+ &#39;Ett sceneri , mer paradisisk enn nogensinde&#39;,
+ &#39;Rikke hen vender seg til Alberte og sier om Beda : Hun er da søt , og gresselig malerisk — bare så håpløst usivilisert&#39;,
+ &#39;Å skilles fra Lydia før eller senere var noe de måtte se i øynene&#39;,
+ &#39;Være nødt til å vise sig for dem så stygg — så —&#39;,
+ &#39;Ingen ser videre til Beda Buck mere&#39;,
+ &#39;Det undret derfor ingen at han ikke kjente Katrine&#39;,
+ &#39;Det er når sorenskriveren er borte , at fru Selmer slår ned klaffen i chatollet og sitter ved den&#39;,
+ &#39;Alvorlig talt , De må overvinne dette&#39;,
+ &#39;Hun måtte stanse av og til og ta omigjen , begge hender holdt ikke alltid følge , og det hele var litt uklart&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Skriv setningene ut til en .txt-fil</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;setninger.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">setning</span> <span class="ow">in</span> <span class="n">sandel_setn</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">setning</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tilbake til <a class="reference external" href="https://nbviewer.jupyter.org/github/DH-LAB-NB/DHLAB/blob/master/DHLAB_ved_Nasjonalbiblioteket.ipynb">DHLAB ved Nasjonalbiblioteket</a></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Legacy_notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Lars Magne Tungland<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

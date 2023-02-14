@@ -1,0 +1,97 @@
+Traceback (most recent call last):
+  File "/home/larsm/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/larsm/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/larsm/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/larsm/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/larsm/anaconda3/envs/jupyter-book/lib/python3.11/asyncio/base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/larsm/anaconda3/envs/jupyter-book/lib/python3.11/contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "/home/larsm/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/nbclient/client.py", line 608, in async_setup_kernel
+    yield
+  File "/home/larsm/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/home/larsm/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/larsm/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from dhlab.wordbank.wordbank import WordForm, WordLemma, WordParadigm
+from dhlab.ngram.ngram import Ngram
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyboardInterrupt[0m                         Traceback (most recent call last)
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdhlab[39;00m[38;5;21;01m.[39;00m[38;5;21;01mwordbank[39;00m[38;5;21;01m.[39;00m[38;5;21;01mwordbank[39;00m [38;5;28;01mimport[39;00m WordForm, WordLemma, WordParadigm
+[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdhlab[39;00m[38;5;21;01m.[39;00m[38;5;21;01mngram[39;00m[38;5;21;01m.[39;00m[38;5;21;01mngram[39;00m [38;5;28;01mimport[39;00m Ngram
+
+File [0;32m~/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/dhlab/__init__.py:2[0m
+[1;32m      1[0m [38;5;66;03m# legacy code[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdhlab[39;00m[38;5;21;01m.[39;00m[38;5;21;01mtext[39;00m [38;5;28;01mimport[39;00m nbtokenizer
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdhlab[39;00m[38;5;21;01m.[39;00m[38;5;21;01mlegacy[39;00m [38;5;28;01mimport[39;00m (
+[1;32m      4[0m     nbtext,
+[1;32m      5[0m     graph_networkx_louvain,
+[0;32m   (...)[0m
+[1;32m      9[0m     module_update
+[1;32m     10[0m )
+[1;32m     12[0m [38;5;66;03m# code from further down in the code tree[39;00m
+[1;32m     13[0m 
+[1;32m     14[0m [38;5;66;03m# text [39;00m
+
+File [0;32m~/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/dhlab/text/__init__.py:2[0m
+[1;32m      1[0m [38;5;124;03m"""Text analysis functionality, including building text corpora."""[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mchunking[39;00m [38;5;28;01mimport[39;00m Chunks
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mconc_coll[39;00m [38;5;28;01mimport[39;00m Concordance, Collocations, Counts
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mcorpus[39;00m [38;5;28;01mimport[39;00m Corpus
+
+File [0;32m~/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/dhlab/text/chunking.py:1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdhlab[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdhlab_api[39;00m [38;5;28;01mimport[39;00m get_chunks, get_chunks_para
+[1;32m      6[0m [38;5;28;01mclass[39;00m [38;5;21;01mChunks[39;00m:
+
+File [0;32m~/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/pandas/__init__.py:11[0m
+[1;32m      9[0m [38;5;28;01mfor[39;00m _dependency [38;5;129;01min[39;00m _hard_dependencies:
+[1;32m     10[0m     [38;5;28;01mtry[39;00m:
+[0;32m---> 11[0m         [38;5;28;43m__import__[39;49m[43m([49m[43m_dependency[49m[43m)[49m
+[1;32m     12[0m     [38;5;28;01mexcept[39;00m [38;5;167;01mImportError[39;00m [38;5;28;01mas[39;00m _e:
+[1;32m     13[0m         _missing_dependencies[38;5;241m.[39mappend([38;5;124mf[39m[38;5;124m"[39m[38;5;132;01m{[39;00m_dependency[38;5;132;01m}[39;00m[38;5;124m: [39m[38;5;132;01m{[39;00m_e[38;5;132;01m}[39;00m[38;5;124m"[39m)
+
+File [0;32m~/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/pytz/__init__.py:1117[0m
+[1;32m    517[0m _all_timezones_unchecked [38;5;241m=[39m \
+[1;32m    518[0m [[38;5;124m'[39m[38;5;124mAfrica/Abidjan[39m[38;5;124m'[39m,
+[1;32m    519[0m  [38;5;124m'[39m[38;5;124mAfrica/Accra[39m[38;5;124m'[39m,
+[0;32m   (...)[0m
+[1;32m   1112[0m  [38;5;124m'[39m[38;5;124mWET[39m[38;5;124m'[39m,
+[1;32m   1113[0m  [38;5;124m'[39m[38;5;124mZulu[39m[38;5;124m'[39m]
+[1;32m   1114[0m all_timezones [38;5;241m=[39m LazyList(
+[1;32m   1115[0m         tz [38;5;28;01mfor[39;00m tz [38;5;129;01min[39;00m _all_timezones_unchecked [38;5;28;01mif[39;00m resource_exists(tz))
+[0;32m-> 1117[0m all_timezones_set [38;5;241m=[39m [43mLazySet[49m[43m([49m[43mall_timezones[49m[43m)[49m
+[1;32m   1118[0m common_timezones [38;5;241m=[39m \
+[1;32m   1119[0m [[38;5;124m'[39m[38;5;124mAfrica/Abidjan[39m[38;5;124m'[39m,
+[1;32m   1120[0m  [38;5;124m'[39m[38;5;124mAfrica/Accra[39m[38;5;124m'[39m,
+[0;32m   (...)[0m
+[1;32m   1551[0m  [38;5;124m'[39m[38;5;124mUS/Pacific[39m[38;5;124m'[39m,
+[1;32m   1552[0m  [38;5;124m'[39m[38;5;124mUTC[39m[38;5;124m'[39m]
+[1;32m   1553[0m common_timezones [38;5;241m=[39m LazyList(
+[1;32m   1554[0m             tz [38;5;28;01mfor[39;00m tz [38;5;129;01min[39;00m common_timezones [38;5;28;01mif[39;00m tz [38;5;129;01min[39;00m all_timezones)
+
+File [0;32m~/anaconda3/envs/jupyter-book/lib/python3.11/site-packages/pytz/lazy.py:164[0m, in [0;36mLazySet.__new__[0;34m(cls, fill_iter)[0m
+[1;32m    161[0m     [38;5;28;01mreturn[39;00m _lazy
+[1;32m    163[0m [38;5;28;01mfor[39;00m name [38;5;129;01min[39;00m [38;5;28mcls[39m[38;5;241m.[39m_props:
+[0;32m--> 164[0m     [38;5;28msetattr[39m(LazySet, name, lazy(name))
+[1;32m    166[0m new_set [38;5;241m=[39m LazySet()
+[1;32m    167[0m [38;5;28;01mreturn[39;00m new_set
+
+[0;31mKeyboardInterrupt[0m: 
+KeyboardInterrupt: 
+

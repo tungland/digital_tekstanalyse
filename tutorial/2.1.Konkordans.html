@@ -1,0 +1,981 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1.3. Konkordanser &#8212; DH-lab dokumenter</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.4. Kollokasjoner" href="2.2.Kollokasjoner.html" />
+    <link rel="prev" title="1.2. Korpusbygging" href="2.0.Bygg_korpus.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">DH-lab dokumenter</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    DHLAB
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Kodeeksempler
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../tutorial.html">
+   1. Tutorials
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.0.Oppstart.html">
+     1.1. Oppstart
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.0.Bygg_korpus.html">
+     1.2. Korpusbygging
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.3. Konkordanser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.2.Kollokasjoner.html">
+     1.4. Kollokasjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.3.Frekvenslister.html">
+     1.6. Frekvenslister
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.4.S%C3%B8k_i_aviser.html">
+     1.7. Søk i aviser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.5.n-gram_og_galakser.html">
+     1.9. N-gram og galakser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.6.sammenlign_metadata.html">
+     1.10. Sammenlign metadata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.0.ner_og_pos.html">
+     1.12. NER og POS med Spacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.1.ordparadigmer.html">
+     1.13. Ordparadigmer med wordbank
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.dispersion.html">
+     1.14. Ordfordeling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../cookbook.html">
+   2. Cookbooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">
+     2.1. Sentimentanalyse i aviskorpus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">
+     2.2. Topic modelling med gensim og dhlab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cookbook/4.2.natbib_query.html">
+     2.3. Søk Nasjonalbibliografiens metadata med dhlab
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/tutorial/2.1.Konkordans.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftutorial/2.1.Konkordans.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/tutorial/2.1.Konkordans.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konkordans-med-og-uten-korpus">
+   1.3.1. 1. Konkordans med og uten korpus
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konkordans-fra-aviser">
+     1.3.1.1. 1.1. Konkordans fra aviser
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fri-konkordans-fra-boker">
+     1.3.1.2. 1.2. Fri konkordans fra bøker
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konkordans-med-stort-definert-korpus">
+     1.3.1.3. 1.3.. Konkordans med stort definert korpus
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Konkordanser</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konkordans-med-og-uten-korpus">
+   1.3.1. 1. Konkordans med og uten korpus
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konkordans-fra-aviser">
+     1.3.1.1. 1.1. Konkordans fra aviser
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fri-konkordans-fra-boker">
+     1.3.1.2. 1.2. Fri konkordans fra bøker
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konkordans-med-stort-definert-korpus">
+     1.3.1.3. 1.3.. Konkordans med stort definert korpus
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="DHlab_logo_web_no_red.png" src="tutorial/attachment:DHlab_logo_web_no_red.png" /></p>
+<section class="tex2jax_ignore mathjax_ignore" id="konkordanser">
+<h1><span class="section-number">1.3. </span>Konkordanser<a class="headerlink" href="#konkordanser" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="konkordans-med-og-uten-korpus">
+<h2><span class="section-number">1.3.1. </span>1. Konkordans med og uten korpus<a class="headerlink" href="#konkordans-med-og-uten-korpus" title="Permalink to this headline">#</a></h2>
+<p>For å sjekke konkordanser i bøker og aviser benyttes kommandoen <code class="docutils literal notranslate"><span class="pre">concordance()</span></code></p>
+<section id="konkordans-fra-aviser">
+<h3><span class="section-number">1.3.1.1. </span>1.1. Konkordans fra aviser<a class="headerlink" href="#konkordans-fra-aviser" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Bygg aviskorpus med aviser som begynner med &#39;stavanger&#39; utgitt fra 1960</span>
+<span class="n">aviskorpus</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digavis&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;stavanger*&quot;</span><span class="p">,</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1960</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Finn konkordanser i korpus</span>
+<span class="c1"># Vis med .show()</span>
+<span class="n">dh</span><span class="o">.</span><span class="n">Concordance</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="n">aviskorpus</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="s2">&quot;demokrati&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_e3fe0">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_e3fe0_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_e3fe0_level0_col1" class="col_heading level0 col1" >concordance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_e3fe0_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_e3fe0_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19861118_94_267_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19861118_94_267_1</a></td>
+      <td id="T_e3fe0_row0_col1" class="data row0 col1" >... Vi vil alle ha samfunnsengasjerte barn , det er en garanti for framtidas <b>demokrati</b> . Men barns meninger om urett... </td>
+    </tr>
+    <tr>
+      <th id="T_e3fe0_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_e3fe0_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19950428_103_97_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19950428_103_97_1</a></td>
+      <td id="T_e3fe0_row1_col1" class="data row1 col1" >... Benjamin Franklin Fagbevegelsen For oss som mener folkelig deltakelse er et nødvendig element i et <b>demokrati</b> , er det en... </td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Alternavtivt kan man finne konkordanser direkte fra et Corpus objekt via `.conc` </span>
+
+<span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digavis&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;stavanger*&quot;</span><span class="p">,</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1960</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">conc</span><span class="p">(</span><span class="s2">&quot;demokrati&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_ab6bc">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_ab6bc_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_ab6bc_level0_col1" class="col_heading level0 col1" >concordance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_ab6bc_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_ab6bc_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20181105_126_0_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20181105_126_0_1</a></td>
+      <td id="T_ab6bc_row0_col1" class="data row0 col1" >... gi traumebehandling , utdanning , fokus på kvinners rettigheter og opplæring i <b>demokrati</b> og ikke-voldelig konfliktløsning blant palestinsk ungdom .</td>
+    </tr>
+    <tr>
+      <th id="T_ab6bc_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_ab6bc_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20211019_129_0_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20211019_129_0_1</a></td>
+      <td id="T_ab6bc_row1_col1" class="data row1 col1" >et tap for vårt <b>demokrati</b> .</td>
+    </tr>
+    <tr>
+      <th id="T_ab6bc_level0_row2" class="row_heading level0 row2" >6</th>
+      <td id="T_ab6bc_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1</a></td>
+      <td id="T_ab6bc_row2_col1" class="data row2 col1" ><b>Demokrati</b> i Vindafjord</td>
+    </tr>
+    <tr>
+      <th id="T_ab6bc_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_ab6bc_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1</a></td>
+      <td id="T_ab6bc_row3_col1" class="data row3 col1" >... for Kjenoppbvgging av landet etter borgerkrigen med blant annet jordreform blandingsøkonomi og <b>demokrati</b> . På lik linje med det gjenoppbyggingsprogrammet</td>
+    </tr>
+    <tr>
+      <th id="T_ab6bc_level0_row4" class="row_heading level0 row4" >5</th>
+      <td id="T_ab6bc_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1</a></td>
+      <td id="T_ab6bc_row4_col1" class="data row4 col1" >... Er ikke dette <b>demokrati</b> ?</td>
+    </tr>
+    <tr>
+      <th id="T_ab6bc_level0_row5" class="row_heading level0 row5" >4</th>
+      <td id="T_ab6bc_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1</a></td>
+      <td id="T_ab6bc_row5_col1" class="data row5 col1" >... Der vil Tjonn finne et levende <b>demokrati</b> .</td>
+    </tr>
+    <tr>
+      <th id="T_ab6bc_level0_row6" class="row_heading level0 row6" >8</th>
+      <td id="T_ab6bc_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1</a></td>
+      <td id="T_ab6bc_row6_col1" class="data row6 col1" >... om ikkje ein så viktig mann ? Den nye form * for <b>demokrati</b> i Vindafjord bør gå ut på at... </td>
+    </tr>
+    <tr>
+      <th id="T_ab6bc_level0_row7" class="row_heading level0 row7" >2</th>
+      <td id="T_ab6bc_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19750214_83_38_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19750214_83_38_1</a></td>
+      <td id="T_ab6bc_row7_col1" class="data row7 col1" >... Det er å hflpe at vårt lands ungdom gjennomskuer falskheten i påstanden om at Sosialistisk Ungdom kjemper for <b>demokrati</b> .... </td>
+    </tr>
+    <tr>
+      <th id="T_ab6bc_level0_row8" class="row_heading level0 row8" >7</th>
+      <td id="T_ab6bc_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840126_92_22_1</a></td>
+      <td id="T_ab6bc_row8_col1" class="data row8 col1" >Ei ny form for <b>demokrati</b> kalla rådmannen i Vindafjord framlegget mitt der eg ba han orsaka seg for forslaget sitt... </td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="fri-konkordans-fra-boker">
+<h3><span class="section-number">1.3.1.2. </span>1.2. Fri konkordans fra bøker<a class="headerlink" href="#fri-konkordans-fra-boker" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bygg korpus med bøker som nevner &quot;Vinskibelighed&quot; mellom 1600 og 1850</span>
+<span class="n">bokkorpus</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digibok&quot;</span><span class="p">,</span> <span class="n">fulltext</span><span class="o">=</span><span class="s2">&quot;Vinskibelighed&quot;</span><span class="p">,</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1600</span><span class="p">,</span> <span class="n">to_year</span><span class="o">=</span><span class="mi">1850</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Finn konkordanser from &#39;Vinskibelighet&#39;. Vis med &#39;.show()&#39;</span>
+<span class="n">dh</span><span class="o">.</span><span class="n">Concordance</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="n">bokkorpus</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="s2">&quot;Vinskibelighed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_85151">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_85151_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_85151_level0_col1" class="col_heading level0 col1" >concordance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_85151_level0_row0" class="row_heading level0 row0" >14</th>
+      <td id="T_85151_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2008040410001'>URN:NBN:no-nb_digibok_2008040410001</a></td>
+      <td id="T_85151_row0_col1" class="data row0 col1" >... Desuden kan <b>Vinskibelighed</b> eller Arbeidsomhed i en vis Art , især af grovere , Forretninger aabenbar gaae for vidt .... </td>
+    </tr>
+    <tr>
+      <th id="T_85151_level0_row1" class="row_heading level0 row1" >21</th>
+      <td id="T_85151_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2009020900048'>URN:NBN:no-nb_digibok_2009020900048</a></td>
+      <td id="T_85151_row1_col1" class="data row1 col1" >... Da Phønicerne senere bleve undertvungne af Perserne , tabte deres <b>Vinskibelighed</b> og Handel sig , og de bleve aldrig meer... </td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="konkordans-med-stort-definert-korpus">
+<h3><span class="section-number">1.3.1.3. </span>1.3.. Konkordans med stort definert korpus<a class="headerlink" href="#konkordans-med-stort-definert-korpus" title="Permalink to this headline">#</a></h3>
+<p>Her bygger vi først et korpus. Se eksempelfil om <a class="reference external" href="https://nbviewer.jupyter.org/github/DH-LAB-NB/DHLAB/blob/master/1_Bygg_korpus.ipynb">Korpusbygging</a> for ulike måter å definere korpus.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digibok&quot;</span><span class="p">,</span> <span class="n">fulltext</span><span class="o">=</span><span class="s1">&#39;kvinner&#39;</span><span class="p">,</span> <span class="n">ddk</span><span class="o">=</span><span class="s2">&quot;33*&quot;</span><span class="p">,</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1960</span><span class="p">,</span> <span class="n">to_year</span><span class="o">=</span><span class="mi">1970</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Undersøk lengden på korpuset med <code class="docutils literal notranslate"><span class="pre">.size</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>331
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi kan dra ut et delkorpus for søkeformål med <code class="docutils literal notranslate"><span class="pre">.sample()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>275</th>
+      <td>100518968</td>
+      <td>URN:NBN:no-nb_digibok_2007050901032</td>
+      <td>Arbeidervernlover : lov om arbeidervern av 7. ...</td>
+      <td>Friberg , Odd</td>
+      <td>oai:nb.bibsys.no:999106083184702202</td>
+      <td>ec8ec9046c0572183322181941b82786</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>19680101</td>
+      <td>1968</td>
+      <td>Norli</td>
+      <td>nob</td>
+      <td>arbeidsrett / norge</td>
+      <td>331</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>100147557</td>
+      <td>URN:NBN:no-nb_digibok_2013050306062</td>
+      <td>Lov om arbeidsvilkår for arbeidere i jordbruke...</td>
+      <td>Lysebråte , Karsten / Friberg , Odd</td>
+      <td>oai:nb.bibsys.no:999202761644702202</td>
+      <td>b8a8d2552102352c7fa6d4ece7532334</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>19620101</td>
+      <td>1962</td>
+      <td>Norli</td>
+      <td>nob</td>
+      <td></td>
+      <td>331</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Konkordans fra sample</span>
+<span class="n">dh</span><span class="o">.</span><span class="n">Concordance</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="n">korpus</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">query</span><span class="o">=</span><span class="s2">&quot;barn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_3f776">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_3f776_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_3f776_level0_col1" class="col_heading level0 col1" >concordance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_3f776_level0_row0" class="row_heading level0 row0" >116</th>
+      <td id="T_3f776_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2021083148541'>URN:NBN:no-nb_digibok_2021083148541</a></td>
+      <td id="T_3f776_row0_col1" class="data row0 col1" >tabell til 6000 og med to tusen pr. <b>barn</b> videre . Den økte byrde med forsørgelsen skal man da øke... </td>
+    </tr>
+    <tr>
+      <th id="T_3f776_level0_row1" class="row_heading level0 row1" >266</th>
+      <td id="T_3f776_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017040348284'>URN:NBN:no-nb_digibok_2017040348284</a></td>
+      <td id="T_3f776_row1_col1" class="data row1 col1" >Sigvard Larsen fikk allikevel tid til å lese bøker og oppmuntret sine <b>barn</b> til å søke kunnskaper ved alltid å... </td>
+    </tr>
+    <tr>
+      <th id="T_3f776_level0_row2" class="row_heading level0 row2" >154</th>
+      <td id="T_3f776_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007051504036'>URN:NBN:no-nb_digibok_2007051504036</a></td>
+      <td id="T_3f776_row2_col1" class="data row2 col1" >... I kampen mot ein nådelaus død kastar dei inn eit overskot av <b>barn</b> som er dømde til å ofrast og... </td>
+    </tr>
+    <tr>
+      <th id="T_3f776_level0_row3" class="row_heading level0 row3" >133</th>
+      <td id="T_3f776_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2021083148541'>URN:NBN:no-nb_digibok_2021083148541</a></td>
+      <td id="T_3f776_row3_col1" class="data row3 col1" >Det må være uriktig å plassere barnefamiliene likt ut fra antall <b>barn</b> uten hensyn til familienes varierende inntekter og evne... </td>
+    </tr>
+    <tr>
+      <th id="T_3f776_level0_row4" class="row_heading level0 row4" >38</th>
+      <td id="T_3f776_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011060108092'>URN:NBN:no-nb_digibok_2011060108092</a></td>
+      <td id="T_3f776_row4_col1" class="data row4 col1" >... enkelt familie ofrer alle sine spareskillinger på å gi <b>barn</b> og slektninger utdannelse bare for kunnskapenes skyld . Tvert imot... </td>
+    </tr>
+    <tr>
+      <th id="T_3f776_level0_row5" class="row_heading level0 row5" >105</th>
+      <td id="T_3f776_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2021083148541'>URN:NBN:no-nb_digibok_2021083148541</a></td>
+      <td id="T_3f776_row5_col1" class="data row5 col1" >... fordi hustruen har lav inntekt ) når familien har legimiterte utgifter til hjelp i hjemmet , stell av <b>barn</b> osv.... </td>
+    </tr>
+    <tr>
+      <th id="T_3f776_level0_row6" class="row_heading level0 row6" >184</th>
+      <td id="T_3f776_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007061501004'>URN:NBN:no-nb_digibok_2007061501004</a></td>
+      <td id="T_3f776_row6_col1" class="data row6 col1" >... Hun fikk sitt annet <b>barn</b> 24. november 1950 , ( altså mens hun hadde permisjon uten lønn ) og søkte... </td>
+    </tr>
+    <tr>
+      <th id="T_3f776_level0_row7" class="row_heading level0 row7" >177</th>
+      <td id="T_3f776_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007050700017'>URN:NBN:no-nb_digibok_2007050700017</a></td>
+      <td id="T_3f776_row7_col1" class="data row7 col1" >... ven pro Bent av <b>barn</b> « om m ^ ter i kfirßte Bkoleklaßße , o ^ de rekrutter Bom m ^... </td>
+    </tr>
+    <tr>
+      <th id="T_3f776_level0_row8" class="row_heading level0 row8" >66</th>
+      <td id="T_3f776_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2021083148541'>URN:NBN:no-nb_digibok_2021083148541</a></td>
+      <td id="T_3f776_row8_col1" class="data row8 col1" >... I betraktning av det store antall tilfelle med forsørgede <b>barn</b> som har lønnsinntekt , er det av vesentlig betydning at... </td>
+    </tr>
+    <tr>
+      <th id="T_3f776_level0_row9" class="row_heading level0 row9" >273</th>
+      <td id="T_3f776_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017060148173'>URN:NBN:no-nb_digibok_2017060148173</a></td>
+      <td id="T_3f776_row9_col1" class="data row9 col1" >... Søndagen var det reint gromt , den lengtet vi <b>barn</b> fram til , for da var det enten ferskt kjøtt... </td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Flere ord eller ordformer kan søkes etter på en gang. Bruk ‘OR’ for å separerer ordene.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dh</span><span class="o">.</span><span class="n">Concordance</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="n">korpus</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="s1">&#39;skole OR skolen OR Skole OR skule&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_73798">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_73798_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_73798_level0_col1" class="col_heading level0 col1" >concordance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_73798_level0_row0" class="row_heading level0 row0" >1086</th>
+      <td id="T_73798_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016011848034'>URN:NBN:no-nb_digibok_2016011848034</a></td>
+      <td id="T_73798_row0_col1" class="data row0 col1" ><b>Skolen</b> i Lyngdal er idag i støpeskjeen . Berge <b>skole</b> ble ferdig i 1953. Den har gitt rom til folkeskole... </td>
+    </tr>
+    <tr>
+      <th id="T_73798_level0_row1" class="row_heading level0 row1" >604</th>
+      <td id="T_73798_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014071706061'>URN:NBN:no-nb_digibok_2014071706061</a></td>
+      <td id="T_73798_row1_col1" class="data row1 col1" >... Bare slike navn som « almueskole » , « fattigskole » , « betalingsskole » , « folkeskole » , « borgerskole » , « den lærde <b>skole</b> » og « den høyere... </td>
+    </tr>
+    <tr>
+      <th id="T_73798_level0_row2" class="row_heading level0 row2" >105</th>
+      <td id="T_73798_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2013112608011'>URN:NBN:no-nb_digibok_2013112608011</a></td>
+      <td id="T_73798_row2_col1" class="data row2 col1" >... fast <b>skole</b> » . Omgangsskolen derimot bygde på legdeordningen slik at bøndene måtte avstå et rom på omgang til <b>skolen</b> ,... </td>
+    </tr>
+    <tr>
+      <th id="T_73798_level0_row3" class="row_heading level0 row3" >881</th>
+      <td id="T_73798_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007041701053'>URN:NBN:no-nb_digibok_2007041701053</a></td>
+      <td id="T_73798_row3_col1" class="data row3 col1" >Nyordning i <b>skolen</b></td>
+    </tr>
+    <tr>
+      <th id="T_73798_level0_row4" class="row_heading level0 row4" >872</th>
+      <td id="T_73798_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007041701053'>URN:NBN:no-nb_digibok_2007041701053</a></td>
+      <td id="T_73798_row4_col1" class="data row4 col1" >... klen da var det ikke mange lærerinner med lavere utdanning igjen i <b>skolen</b> .</td>
+    </tr>
+    <tr>
+      <th id="T_73798_level0_row5" class="row_heading level0 row5" >109</th>
+      <td id="T_73798_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2013112608011'>URN:NBN:no-nb_digibok_2013112608011</a></td>
+      <td id="T_73798_row5_col1" class="data row5 col1" >... Det skulle holdes <b>skole</b> tre uker om gangen i hver fordeling , « så kommer læreren fire ganger i året om... </td>
+    </tr>
+    <tr>
+      <th id="T_73798_level0_row6" class="row_heading level0 row6" >1946</th>
+      <td id="T_73798_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017032408005'>URN:NBN:no-nb_digibok_2017032408005</a></td>
+      <td id="T_73798_row6_col1" class="data row6 col1" >... Når en yngling i gammel tid skulle lære skomakeryrket gikk han i en hard <b>skole</b> . Det ble meget slit... </td>
+    </tr>
+    <tr>
+      <th id="T_73798_level0_row7" class="row_heading level0 row7" >1661</th>
+      <td id="T_73798_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2008091000077'>URN:NBN:no-nb_digibok_2008091000077</a></td>
+      <td id="T_73798_row7_col1" class="data row7 col1" >... muligheter for Så lenge vi går på <b>skolen</b> , bør vi være klar over at skolegangen P ersonll S utvikling... </td>
+    </tr>
+    <tr>
+      <th id="T_73798_level0_row8" class="row_heading level0 row8" >988</th>
+      <td id="T_73798_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2015030906010'>URN:NBN:no-nb_digibok_2015030906010</a></td>
+      <td id="T_73798_row8_col1" class="data row8 col1" >døde i 1928. <b>Skolen</b></td>
+    </tr>
+    <tr>
+      <th id="T_73798_level0_row9" class="row_heading level0 row9" >1209</th>
+      <td id="T_73798_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017120548038'>URN:NBN:no-nb_digibok_2017120548038</a></td>
+      <td id="T_73798_row9_col1" class="data row9 col1" >Medlemsmøtene ble til å begynne med holdt privat hos medlemmene , senere ble de holdt på Kirkelandets <b>skole</b> . Nå... </td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Tilbake til <a class="reference external" href="https://nbviewer.jupyter.org/github/DH-LAB-NB/DHLAB/blob/master/DHLAB_ved_Nasjonalbiblioteket.ipynb">DHLAB ved Nasjonalbiblioteket</a></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tutorial"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2.0.Bygg_korpus.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.2. </span>Korpusbygging</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2.2.Kollokasjoner.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.4. </span>Kollokasjoner</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Nasjonalbiblioteket<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

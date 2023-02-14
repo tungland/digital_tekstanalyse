@@ -1,0 +1,1436 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Oppstart &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    DHLAB
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/1.0.Oppstart.html">
+   Oppstart
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.0.Bygg_korpus.html">
+   Korpusbygging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.1.Konkordans.html">
+   Konkordanser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.2.Kollokasjoner.html">
+   Kollokasjoner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.3.Frekvenslister.html">
+   Frekvenslister
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.4.S%C3%B8k_i_aviser.html">
+   Søk i aviser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.5.n-gram_og_galakser.html">
+   N-gram og galakser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.6.sammenlign_metadata.html">
+   Sammenlign metadata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/3.0.ner_og_pos.html">
+   NER og POS med Spacy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/3.1.ordparadigmer.html">
+   1. Ordparadigmer med wordbank
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/3.2.dispersion.html">
+   Ordfordeling
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DHLAB cookbook
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">
+   Sentimentanalyse i aviskorpus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">
+   Topic modelling med gensim og dhlab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/4.2.natbib_query.html">
+   Søk Nasjonalbibliografiens metadata med dhlab
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Legacy_notebooks/5_Navnegrafer.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLegacy_notebooks/5_Navnegrafer.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Legacy_notebooks/5_Navnegrafer.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Oppstart
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navn-i-boker">
+   Navn i bøker
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navn">
+   Navn
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lag-navnegrafen">
+   Lag navnegrafen
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#studer-hvordan-navnene-henger-sammen">
+   Studer hvordan navnene henger sammen
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Oppstart</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Oppstart
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navn-i-boker">
+   Navn i bøker
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navn">
+   Navn
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lag-navnegrafen">
+   Lag navnegrafen
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#studer-hvordan-navnene-henger-sammen">
+   Studer hvordan navnene henger sammen
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="DHlab_logo_web_no_red.png" src="Legacy_notebooks/attachment:DHlab_logo_web_no_red.png" /></p>
+<section id="oppstart">
+<h1>Oppstart<a class="headerlink" href="#oppstart" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dhlab.module_update</span> <span class="kn">import</span> <span class="n">update</span><span class="p">,</span> <span class="n">css</span>
+<span class="kn">import</span> <span class="nn">dhlab.nbtext</span> <span class="k">as</span> <span class="nn">nb</span>
+<span class="kn">from</span> <span class="nn">dhlab.nbtext</span> <span class="kn">import</span> <span class="n">get_urn</span><span class="p">,</span> <span class="n">make_graph</span><span class="p">,</span> <span class="n">get_urn</span><span class="p">,</span> <span class="n">relaterte_ord</span><span class="p">,</span> <span class="n">navn</span><span class="p">,</span> <span class="n">totals</span>
+<span class="kn">import</span> <span class="nn">dhlab.graph_networkx_louvain</span> <span class="k">as</span> <span class="nn">gnl</span>
+<span class="kn">import</span> <span class="nn">dhlab.token_map</span> <span class="k">as</span> <span class="nn">tm</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+
+<span class="n">plot</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span>  <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">0.7</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">dhlab</span> <span class="kn">import</span> <span class="n">Corpus</span>
+<span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="n">css</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>@import url(http://fonts.googleapis.com/css?family=Lato|Philosopher|Montserrat|Source+Code+Pro|Merriweather|Shippori+Mincho|Istok+Web|Philosopher|Assistant:200,400,700);
+
+p {
+    font-size:1.3em;
+    font-family:serif;
+    line-height:1.4em;
+    color:#142850;
+}
+h1, h2, h3, h4 {
+    color:#27496d;
+}
+
+/*
+.prompt, .jp-InputPrompt, .jp-InputArea-prompt, .jp-OutputPrompt, .jp-OutputArea-prompt {
+    visibility: hidden; 
+}
+
+
+.jp-CodeCell .jp-Notebook-cell    {
+    margin-left:10%;
+    margin-right:5%;
+}
+
+
+.jp-InputArea, .jp-OutputArea {
+    margin-left:2.5em;
+    margin-right:2.5em;
+}
+*/
+
+
+body  {
+    margin:10%;
+    counter-reset: h1counter;
+
+}
+
+/* .jp-MarkdownOutput, .text_cell_render {
+
+    background-color:#FEFBF1;    
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0, 0.10);;
+} */
+
+
+h1:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    /*margin: 0 auto; This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 10px;
+    border-bottom:3px solid SlateGray; /* FireBrick; */
+}
+
+h2:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    /*margin: 0 auto; This will center the border. */
+    width: 30%; /* Change this to whatever width you want. */
+    padding-top: 10px;
+    border-bottom:2px solid SlateGray; /* FireBrick; */
+}
+
+</style></div></div>
+</div>
+</section>
+<section id="navn-i-boker">
+<h1>Navn i bøker<a class="headerlink" href="#navn-i-boker" title="Permalink to this headline">#</a></h1>
+<p>Finn en bok.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urns</span> <span class="o">=</span> <span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digibok&quot;</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="s2">&quot;mykle&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;røde&quot;</span><span class="p">)</span>
+<span class="c1"># urns.frame.urn.to_list()</span>
+<span class="n">urns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+      <th>ocr_creator</th>
+      <th>ocr_timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100475735</td>
+      <td>URN:NBN:no-nb_digibok_2008111304085</td>
+      <td>Sangen om den røde rubin</td>
+      <td>Mykle , Agnar</td>
+      <td>oai:nb.bibsys.no:990100392604702202</td>
+      <td>97356f611c399a74591d352f15cda72e</td>
+      <td>8205277400</td>
+      <td>[Oslo]</td>
+      <td>20010101</td>
+      <td>2001</td>
+      <td>Gyldendal</td>
+      <td>nob</td>
+      <td></td>
+      <td>839.823</td>
+      <td>novel</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100442704</td>
+      <td>URN:NBN:no-nb_digibok_2008100104083</td>
+      <td>Sangen om den røde rubin</td>
+      <td>Mykle , Agnar</td>
+      <td>oai:nb.bibsys.no:999802005804702202</td>
+      <td>b0177425b68689c76492fc12b2314d5d</td>
+      <td>8205253617</td>
+      <td>[Oslo]</td>
+      <td>19980101</td>
+      <td>1998</td>
+      <td>Gyldendal</td>
+      <td>nob</td>
+      <td></td>
+      <td>839.823 500 "Teksten i nærværende utgave følge...</td>
+      <td>fiction</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100437990</td>
+      <td>URN:NBN:no-nb_digibok_2021030248601</td>
+      <td>Sangen om den røde rubin : roman</td>
+      <td>Mykle , Agnar</td>
+      <td>oai:nb.bibsys.no:991001720244702202</td>
+      <td>8f4bd26da544492fa32ceca23704d211</td>
+      <td></td>
+      <td>[Oslo]</td>
+      <td>20100101</td>
+      <td>2010</td>
+      <td>Gyldendal</td>
+      <td>nob</td>
+      <td>norsk / litteratur / roman</td>
+      <td>839.823</td>
+      <td>novel</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100457241</td>
+      <td>URN:NBN:no-nb_digibok_2008021404040</td>
+      <td>Sangen om den røde rubin</td>
+      <td>Mykle , Agnar</td>
+      <td>oai:nb.bibsys.no:999524738954702202</td>
+      <td>7783c9f0eaf1279650d64ffef1f32139</td>
+      <td>8205232660</td>
+      <td>Oslo</td>
+      <td>19950101</td>
+      <td>1995</td>
+      <td>Gyldendal</td>
+      <td>nob</td>
+      <td>norske / romaner / 1950-tallet</td>
+      <td>839.823</td>
+      <td>fiction</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100437352</td>
+      <td>URN:NBN:no-nb_digibok_2021031509001</td>
+      <td>Sangen om den røde rubin</td>
+      <td>Borgersen , Morten / Mykle , Agnar / Mykle , A...</td>
+      <td>oai:nb.bibsys.no:991011745004702202</td>
+      <td>3aacb9e9c9bc5d84de758c337a161eac</td>
+      <td></td>
+      <td>[Oslo]</td>
+      <td>20100101</td>
+      <td>2010</td>
+      <td>Riksteatret</td>
+      <td>nob</td>
+      <td></td>
+      <td>792.9</td>
+      <td>drama</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>100521141</td>
+      <td>URN:NBN:no-nb_digibok_2007052404016</td>
+      <td>Sangen om den røde rubin : roman</td>
+      <td>Mykle , Agnar</td>
+      <td>oai:nb.bibsys.no:998620665654702202</td>
+      <td>94e9c5eb87ef88836c675a98793e5ba8</td>
+      <td>8205040850</td>
+      <td>Oslo</td>
+      <td>19670101</td>
+      <td>1967</td>
+      <td>Gyldendal</td>
+      <td>nob</td>
+      <td>norsk / litteratur / romaner</td>
+      <td>839.823</td>
+      <td>fiction</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>100280507</td>
+      <td>URN:NBN:no-nb_digibok_2016020808126</td>
+      <td>Sangen om den røde rubin</td>
+      <td>Mykle , Agnar</td>
+      <td>oai:nb.bibsys.no:990005305814702202</td>
+      <td>08b690a1662d4725cb3d1e8d719567df</td>
+      <td>8205273197</td>
+      <td>[Oslo]</td>
+      <td>20000101</td>
+      <td>2000</td>
+      <td>Det Nye</td>
+      <td>nob</td>
+      <td></td>
+      <td>839.823</td>
+      <td>fiction</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>100263007</td>
+      <td>URN:NBN:no-nb_digibok_2015090129001</td>
+      <td>Sangen om den røde rubin : roman</td>
+      <td>Mykle , Agnar</td>
+      <td>oai:nb.bibsys.no:997521646004702202</td>
+      <td>16af2b161b8aa4d9f8ea5378b19c8aec</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>19560101</td>
+      <td>1956</td>
+      <td>Gyldendal</td>
+      <td>nob</td>
+      <td></td>
+      <td>839.93 / 839.82</td>
+      <td>fiction</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>100505038</td>
+      <td>URN:NBN:no-nb_digibok_2009033100094</td>
+      <td>Sangen om den røde rubin</td>
+      <td>Mykle , Agnar</td>
+      <td>oai:nb.bibsys.no:990222770724702202</td>
+      <td>187b355556860869828990c16fa30ce7</td>
+      <td>8252547745</td>
+      <td>[Oslo]</td>
+      <td>20020101</td>
+      <td>2002</td>
+      <td>Den norske bokklubben</td>
+      <td>nob</td>
+      <td></td>
+      <td>839.823</td>
+      <td>fiction</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>100243069</td>
+      <td>URN:NBN:no-nb_digibok_2015022308062</td>
+      <td>Sangen om den røde rubin : fritt etter Agnar M...</td>
+      <td>Borgersen , Morten / Mykle , Agnar</td>
+      <td>oai:nb.bibsys.no:991011746674702202</td>
+      <td>1f6b7eab8b5d4edeb8d4c291b2705879</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>20100101</td>
+      <td>2010</td>
+      <td>Riksteatret</td>
+      <td>nob</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch URNs</span>
+
+<span class="c1"># urns = nb.book_urn(author = &#39;mykle%&#39;,  title = &#39;%røde%&#39;, limit=100)</span>
+<span class="n">urns</span> <span class="o">=</span> <span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digibok&quot;</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="s2">&quot;mykle&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;røde&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">urn</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+<span class="n">urns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;URN:NBN:no-nb_digibok_2008111304085&#39;,
+ &#39;URN:NBN:no-nb_digibok_2009033100094&#39;,
+ &#39;URN:NBN:no-nb_digibok_2008012304077&#39;,
+ &#39;URN:NBN:no-nb_digibok_2018071607007&#39;,
+ &#39;URN:NBN:no-nb_digibok_2009011504069&#39;,
+ &#39;URN:NBN:no-nb_digibok_2021031509001&#39;,
+ &#39;URN:NBN:no-nb_digibok_2015090129001&#39;,
+ &#39;URN:NBN:no-nb_digibok_2008100104083&#39;,
+ &#39;URN:NBN:no-nb_digibok_2007052404016&#39;,
+ &#39;URN:NBN:no-nb_digibok_2021030248601&#39;,
+ &#39;URN:NBN:no-nb_digibok_2016020808126&#39;,
+ &#39;URN:NBN:no-nb_digibok_2008021404040&#39;,
+ &#39;URN:NBN:no-nb_digibok_2014040406070&#39;,
+ &#39;URN:NBN:no-nb_digibok_2012020708059&#39;,
+ &#39;URN:NBN:no-nb_digibok_2008021104029&#39;,
+ &#39;URN:NBN:no-nb_digibok_2015022308062&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Her ønsker vi den komplette, så vi kan bruke kommandoen <code class="docutils literal notranslate"><span class="pre">book_count()</span></code> for å få antallet ord i hver bok.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">dh</span><span class="o">.</span><span class="n">Chunks</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class Chunks in module dhlab.text.chunking:
+
+class Chunks(builtins.object)
+ |  Chunks(urn=None, chunks=1000)
+ |  
+ |  Create chunks from a text.
+ |  
+ |  Methods defined here:
+ |  
+ |  __init__(self, urn=None, chunks=1000)
+ |      :param urn: str or list
+ |      :param chunks: {&#39;para&#39;, &#39;avsn&#39;} or int
+ |  
+ |  to_pandas(self)
+ |      Vectorize into a pandas dataframe with words a index
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">dh</span><span class="o">.</span><span class="n">Counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class Counts in module dhlab.text.conc_coll:
+
+class Counts(dhlab.text.dhlab_object.DhlabObj)
+ |  Counts(corpus=None, words=None)
+ |  
+ |  Provide counts for a corpus - shouldn&#39;t be too large
+ |  
+ |  Method resolution order:
+ |      Counts
+ |      dhlab.text.dhlab_object.DhlabObj
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __init__(self, corpus=None, words=None)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  sum(self)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |  
+ |  from_df(df) from builtins.type
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from dhlab.text.dhlab_object.DhlabObj:
+ |  
+ |  __repr__(self) -&gt; str
+ |      Return the string representation of the  DhlabObj frame attribute
+ |  
+ |  head(self, n=5)
+ |  
+ |  sort(self, by=None, asc=False)
+ |  
+ |  tail(self, n=5)
+ |  
+ |  to_csv(self, path)
+ |  
+ |  to_excel(self, path)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from dhlab.text.dhlab_object.DhlabObj:
+ |  
+ |  from_csv(path) from builtins.type
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from dhlab.text.dhlab_object.DhlabObj:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dh</span><span class="o">.</span><span class="n">Chunks</span><span class="p">(</span><span class="s2">&quot;URN:NBN:no-nb_digibok_2015022308062&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;dhlab.text.chunking.Chunks at 0x7f4065b376a0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">nb</span><span class="o">.</span><span class="n">book_count</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">urns</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="p">[</span><span class="n">nb</span><span class="o">.</span><span class="n">book_count</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">urns</span><span class="p">]</span>
+
+<span class="nn">Cell In[20], line 1,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="p">[</span><span class="n">nb</span><span class="o">.</span><span class="n">book_count</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">urns</span><span class="p">]</span>
+
+<span class="nn">File ~/.virtualenvs/digital_tekstanalyse-d0erqq9h/lib/python3.10/site-packages/dhlab/legacy/nbtext.py:222,</span> in <span class="ni">book_count</span><span class="nt">(urns)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span> <span class="k">def</span> <span class="nf">book_count</span><span class="p">(</span><span class="n">urns</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>     <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;urns&#39;</span><span class="p">:</span> <span class="n">urns</span><span class="p">}</span>
+<span class="ne">--&gt; </span><span class="mi">222</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;https://api.nb.no/ngram/book_count&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span>     <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+
+<span class="nn">File ~/.virtualenvs/digital_tekstanalyse-d0erqq9h/lib/python3.10/site-packages/requests/api.py:115,</span> in <span class="ni">post</span><span class="nt">(url, data, json, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">103</span> <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a POST request.</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span><span class="sd">     :rtype: requests.Response</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">115</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">&quot;post&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">json</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/.virtualenvs/digital_tekstanalyse-d0erqq9h/lib/python3.10/site-packages/requests/api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the &#39;with&#39; statement we are sure the session is closed, thus we</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/.virtualenvs/digital_tekstanalyse-d0erqq9h/lib/python3.10/site-packages/requests/sessions.py:587,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">582</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">    </span><span class="mi">583</span>     <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="s2">&quot;allow_redirects&quot;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span> <span class="p">}</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">587</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">589</span> <span class="k">return</span> <span class="n">resp</span>
+
+<span class="nn">File ~/.virtualenvs/digital_tekstanalyse-d0erqq9h/lib/python3.10/site-packages/requests/sessions.py:701,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">698</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="c1"># Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">701</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nn">File ~/.virtualenvs/digital_tekstanalyse-d0erqq9h/lib/python3.10/site-packages/requests/adapters.py:489,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">487</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">488</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">chunked</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">489</span>         <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">490</span>             <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">491</span>             <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span>             <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span>             <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>             <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>             <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>             <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>             <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>             <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span>             <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>     <span class="c1"># Send the request.</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span>         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;proxy_pool&quot;</span><span class="p">):</span>
+
+<span class="nn">File ~/.virtualenvs/digital_tekstanalyse-d0erqq9h/lib/python3.10/site-packages/urllib3/connectionpool.py:703,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_prepare_proxy</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Make the request on the httplib connection object.</span>
+<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">708</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">709</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">710</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">711</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">713</span> <span class="c1"># If we&#39;re going to release the connection in ``finally:``, then</span>
+<span class="g g-Whitespace">    </span><span class="mi">714</span> <span class="c1"># the response doesn&#39;t need to know about the connection. Otherwise</span>
+<span class="g g-Whitespace">    </span><span class="mi">715</span> <span class="c1"># it will also try to release it and we&#39;ll have a double-release</span>
+<span class="g g-Whitespace">    </span><span class="mi">716</span> <span class="c1"># mess.</span>
+<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="n">response_conn</span> <span class="o">=</span> <span class="n">conn</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">release_conn</span> <span class="k">else</span> <span class="kc">None</span>
+
+<span class="nn">File ~/.virtualenvs/digital_tekstanalyse-d0erqq9h/lib/python3.10/site-packages/urllib3/connectionpool.py:449,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">444</span>             <span class="n">httplib_response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">445</span>         <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">446</span>             <span class="c1"># Remove the TypeError from the exception chain in</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span>             <span class="c1"># Python 3 (including for exceptions like SystemExit).</span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span>             <span class="c1"># Otherwise it looks like a bug in the code.</span>
+<span class="ne">--&gt; </span><span class="mi">449</span>             <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span> <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">,</span> <span class="n">SocketError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
+
+<span class="nn">File &lt;string&gt;:3,</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
+
+<span class="nn">File ~/.virtualenvs/digital_tekstanalyse-d0erqq9h/lib/python3.10/site-packages/urllib3/connectionpool.py:444,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span>     <span class="c1"># Python 3</span>
+<span class="g g-Whitespace">    </span><span class="mi">443</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">444</span>         <span class="n">httplib_response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">445</span>     <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">446</span>         <span class="c1"># Remove the TypeError from the exception chain in</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span>         <span class="c1"># Python 3 (including for exceptions like SystemExit).</span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span>         <span class="c1"># Otherwise it looks like a bug in the code.</span>
+<span class="g g-Whitespace">    </span><span class="mi">449</span>         <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="nn">File /usr/lib/python3.10/http/client.py:1374,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1372</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1373</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1374</span>         <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1375</span>     <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1376</span>         <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nn">File /usr/lib/python3.10/http/client.py:318,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">316</span> <span class="c1"># read until we get a non-100 response</span>
+<span class="g g-Whitespace">    </span><span class="mi">317</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">318</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="k">break</span>
+
+<span class="nn">File /usr/lib/python3.10/http/client.py:279,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span> <span class="k">def</span> <span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">279</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span>         <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">&quot;status line&quot;</span><span class="p">)</span>
+
+<span class="nn">File /usr/lib/python3.10/socket.py:705,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">705</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File /usr/lib/python3.10/ssl.py:1274,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1270</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1271</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+<span class="nn">File /usr/lib/python3.10/ssl.py:1130,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1128</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1129</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1130</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1131</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1132</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi legger URN-en i en variabel. Det gjør det lettere å gjøre endringer, og kjøre notebooken på andre bøker.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BOOK</span> <span class="o">=</span> <span class="mi">2015090129001</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="navn">
+<h1>Navn<a class="headerlink" href="#navn" title="Permalink to this headline">#</a></h1>
+<p>Navn er alt som starter med store bokstaver, men som også forekommer utenom punktum. Kommando er  ‘names()’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wp</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">BOOK</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">tm</span><span class="o">.</span><span class="n">show_names</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lag 1
+=========
+
+    Ask - 872
+    Daniel - 120
+    Doffen - 116
+    Gud - 88
+    Embla - 86
+    Robert - 67
+    Constance - 64
+    Økonomiske - 48
+    Eirik - 46
+    Fiffolo - 45
+    Wilhelmine - 42
+    Norge - 39
+    Stabell - 38
+    Molly - 37
+    Floden - 35
+    Stallen - 33
+    Francis - 29
+    Wolfgang - 28
+    Sosialistisk - 26
+    Tyskland - 26
+    Burlefot - 23
+    Sangen - 23
+    Abrahamsen - 22
+    Poppi - 22
+    Studentersamfunnet - 22
+    Studentlag - 22
+    Taraldsen - 22
+    Frankrike - 20
+    Gunnhild - 20
+    Hm - 18
+    Maia - 18
+    Vil - 17
+    Hitler - 16
+
+Lag 2
+=========
+
+    Eirik Floden - 23
+    Francis Stabell - 22
+    Sosialistisk Studentlag - 20
+    Ask Burlefot - 15
+    Gud Gud - 1
+
+Lag 3
+=========
+
+
+Lag 4
+=========
+</pre></div>
+</div>
+</div>
+</div>
+<p>Noe kan fjernes, enkelte ord dukker opp som ikke er navn.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span><span class="o">.</span><span class="n">token_map</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[((&#39;Abrahamsen&#39;,), (&#39;Abrahamsen&#39;,)),
+ ((&#39;Ask&#39;,), (&#39;Ask&#39;, &#39;Burlefot&#39;)),
+ ((&#39;Burlefot&#39;,), (&#39;Ask&#39;, &#39;Burlefot&#39;)),
+ ((&#39;Constance&#39;,), (&#39;Constance&#39;,)),
+ ((&#39;Daniel&#39;,), (&#39;Daniel&#39;,)),
+ ((&#39;Doffen&#39;,), (&#39;Doffen&#39;,)),
+ ((&#39;Eirik&#39;,), (&#39;Eirik&#39;, &#39;Floden&#39;)),
+ ((&#39;Embla&#39;,), (&#39;Embla&#39;,)),
+ ((&#39;Fiffolo&#39;,), (&#39;Fiffolo&#39;,)),
+ ((&#39;Floden&#39;,), (&#39;Eirik&#39;, &#39;Floden&#39;)),
+ ((&#39;Francis&#39;,), (&#39;Francis&#39;, &#39;Stabell&#39;)),
+ ((&#39;Frankrike&#39;,), (&#39;Frankrike&#39;,)),
+ ((&#39;Gud&#39;,), (&#39;Gud&#39;, &#39;Gud&#39;)),
+ ((&#39;Gunnhild&#39;,), (&#39;Gunnhild&#39;,)),
+ ((&#39;Hitler&#39;,), (&#39;Hitler&#39;,)),
+ ((&#39;Hm&#39;,), (&#39;Hm&#39;,)),
+ ((&#39;Maia&#39;,), (&#39;Maia&#39;,)),
+ ((&#39;Molly&#39;,), (&#39;Molly&#39;,)),
+ ((&#39;Norge&#39;,), (&#39;Norge&#39;,)),
+ ((&#39;Poppi&#39;,), (&#39;Poppi&#39;,)),
+ ((&#39;Robert&#39;,), (&#39;Robert&#39;,)),
+ ((&#39;Sangen&#39;,), (&#39;Sangen&#39;,)),
+ ((&#39;Sosialistisk&#39;,), (&#39;Sosialistisk&#39;, &#39;Studentlag&#39;)),
+ ((&#39;Stabell&#39;,), (&#39;Francis&#39;, &#39;Stabell&#39;)),
+ ((&#39;Stallen&#39;,), (&#39;Stallen&#39;,)),
+ ((&#39;Studentersamfunnet&#39;,), (&#39;Studentersamfunnet&#39;,)),
+ ((&#39;Studentlag&#39;,), (&#39;Sosialistisk&#39;, &#39;Studentlag&#39;)),
+ ((&#39;Taraldsen&#39;,), (&#39;Taraldsen&#39;,)),
+ ((&#39;Tyskland&#39;,), (&#39;Tyskland&#39;,)),
+ ((&#39;Vil&#39;,), (&#39;Vil&#39;,)),
+ ((&#39;Wilhelmine&#39;,), (&#39;Wilhelmine&#39;,)),
+ ((&#39;Wolfgang&#39;,), (&#39;Wolfgang&#39;,)),
+ ((&#39;Økonomiske&#39;,), (&#39;Økonomiske&#39;,)),
+ ((&#39;Ask&#39;, &#39;Burlefot&#39;), (&#39;Ask&#39;, &#39;Burlefot&#39;)),
+ ((&#39;Gud&#39;, &#39;Gud&#39;), (&#39;Gud&#39;, &#39;Gud&#39;)),
+ ((&#39;Eirik&#39;, &#39;Floden&#39;), (&#39;Eirik&#39;, &#39;Floden&#39;)),
+ ((&#39;Sosialistisk&#39;, &#39;Studentlag&#39;), (&#39;Sosialistisk&#39;, &#39;Studentlag&#39;)),
+ ((&#39;Francis&#39;, &#39;Stabell&#39;), (&#39;Francis&#39;, &#39;Stabell&#39;))]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="lag-navnegrafen">
+<h1>Lag navnegrafen<a class="headerlink" href="#lag-navnegrafen" title="Permalink to this headline">#</a></h1>
+<p>Kommando er <code class="docutils literal notranslate"><span class="pre">make_network_name(&lt;URN&gt;,</span> <span class="pre">&lt;liste</span> <span class="pre">over</span> <span class="pre">ord&gt;)</span></code> fra modulen <code class="docutils literal notranslate"><span class="pre">token_map</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">graf</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">make_network_name_graph</span><span class="p">(</span><span class="n">BOOK</span><span class="p">,</span> <span class="n">tokens</span><span class="o">=</span><span class="n">wp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vis grafen med <code class="docutils literal notranslate"><span class="pre">show_graph</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gnl</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">graf</span><span class="p">,</span> <span class="n">spread</span><span class="o">=</span><span class="mf">1.8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_Navnegrafer_21_0.png" src="../_images/5_Navnegrafer_21_0.png" />
+</div>
+</div>
+</section>
+<section id="studer-hvordan-navnene-henger-sammen">
+<h1>Studer hvordan navnene henger sammen<a class="headerlink" href="#studer-hvordan-navnene-henger-sammen" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gnl</span><span class="o">.</span><span class="n">show_communities</span><span class="p">(</span><span class="n">graf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Constance-Daniel :  Constance, Daniel, Wilhelmine, Molly, Abrahamsen, Hm
+
+Ask_Burlefot-Økonomiske :  Ask_Burlefot, Økonomiske, Wolfgang, Eirik_Floden, Fiffolo, Francis_Stabell, Doffen, Robert, Studentersamfunnet, Maia, Frankrike
+
+Norge-Tyskland :  Norge, Tyskland, Hitler
+
+Sosialistisk_Studentlag-Gud_Gud :  Sosialistisk_Studentlag, Gud_Gud, Embla, Stallen, Gunnhild
+
+Taraldsen-Poppi :  Taraldsen, Poppi, Vil
+</pre></div>
+</div>
+</div>
+</div>
+<p>Clustrene kan brukes til historieplotting (se også kapittel narrative grafer)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gcom</span> <span class="o">=</span> <span class="n">gnl</span><span class="o">.</span><span class="n">community_dict</span><span class="p">(</span><span class="n">graf</span><span class="p">)</span>
+<span class="n">gcom</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Constance-Daniel&#39;: [&#39;Constance&#39;,
+  &#39;Daniel&#39;,
+  &#39;Wilhelmine&#39;,
+  &#39;Molly&#39;,
+  &#39;Abrahamsen&#39;],
+ &#39;Ask_Burlefot-Økonomiske&#39;: [&#39;Ask_Burlefot&#39;,
+  &#39;Økonomiske&#39;,
+  &#39;Wolfgang&#39;,
+  &#39;Eirik_Floden&#39;,
+  &#39;Fiffolo&#39;,
+  &#39;Francis_Stabell&#39;,
+  &#39;Doffen&#39;,
+  &#39;Robert&#39;,
+  &#39;Studentersamfunnet&#39;,
+  &#39;Hm&#39;,
+  &#39;Maia&#39;,
+  &#39;Frankrike&#39;],
+ &#39;Norge-Tyskland&#39;: [&#39;Norge&#39;, &#39;Tyskland&#39;, &#39;Hitler&#39;],
+ &#39;Sosialistisk_Studentlag-Gud_Gud&#39;: [&#39;Sosialistisk_Studentlag&#39;,
+  &#39;Gud_Gud&#39;,
+  &#39;Embla&#39;,
+  &#39;Stallen&#39;,
+  &#39;Gunnhild&#39;],
+ &#39;Taraldsen-Poppi&#39;: [&#39;Taraldsen&#39;, &#39;Poppi&#39;, &#39;Vil&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Henter ut vekstdiagrammet med <code class="docutils literal notranslate"><span class="pre">plot_book_wordbags(&lt;urn&gt;,</span> <span class="pre">&lt;ordsekker&gt;,</span> <span class="pre">window=&lt;..&gt;)</span></code> og plotter med <code class="docutils literal notranslate"><span class="pre">plot</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wp_diagram</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">plot_book_wordbags</span><span class="p">(</span><span class="n">BOOK</span><span class="p">,</span> <span class="n">gcom</span><span class="p">,</span><span class="n">window</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">wp_diagram</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5_Navnegrafer_28_0.png" src="../_images/5_Navnegrafer_28_0.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Legacy_notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Lars Magne Tungland<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

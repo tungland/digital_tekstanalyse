@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1. N-gramdata &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    DHLAB
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/1.0.Oppstart.html">
+   Oppstart
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.0.Bygg_korpus.html">
+   Korpusbygging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.1.Konkordans.html">
+   Konkordanser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.2.Kollokasjoner.html">
+   Kollokasjoner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.3.Frekvenslister.html">
+   Frekvenslister
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.4.S%C3%B8k_i_aviser.html">
+   Søk i aviser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.5.n-gram_og_galakser.html">
+   N-gram og galakser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/2.6.sammenlign_metadata.html">
+   Sammenlign metadata
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/3.0.ner_og_pos.html">
+   NER og POS med Spacy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/3.1.ordparadigmer.html">
+   1. Ordparadigmer med wordbank
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorial/3.2.dispersion.html">
+   Ordfordeling
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DHLAB cookbook
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">
+   Sentimentanalyse i aviskorpus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">
+   Topic modelling med gensim og dhlab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cookbook/4.2.natbib_query.html">
+   Søk Nasjonalbibliografiens metadata med dhlab
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Legacy_notebooks/4 a_N-gram_og_galakser_åpen.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLegacy_notebooks/4 a_N-gram_og_galakser_åpen.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Legacy_notebooks/4 a_N-gram_og_galakser_åpen.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   1. N-gramdata
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-av-trendlinjer">
+     1.1. Plotting av trendlinjer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#galakser">
+   2. Galakser
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definer-en-kobling">
+     2.1. Definer en kobling
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#engelsk">
+       2.1.1. Engelsk
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#se-pa-grafen">
+         2.1.1.1. Se på grafen
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#clustre-fra-grafen">
+         2.1.1.2. Clustre fra grafen
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tysk">
+       2.1.2. Tysk
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         2.1.2.1. Se på grafen
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#clustre-fra-tysk-graf">
+         2.1.2.2. Clustre fra tysk graf
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#norsk">
+       2.1.3. Norsk
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id2">
+         2.1.3.1. Se på grafen
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id3">
+         2.1.3.2. Clustre fra grafen
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>1. N-gramdata</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   1. N-gramdata
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-av-trendlinjer">
+     1.1. Plotting av trendlinjer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#galakser">
+   2. Galakser
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definer-en-kobling">
+     2.1. Definer en kobling
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#engelsk">
+       2.1.1. Engelsk
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#se-pa-grafen">
+         2.1.1.1. Se på grafen
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#clustre-fra-grafen">
+         2.1.1.2. Clustre fra grafen
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tysk">
+       2.1.2. Tysk
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         2.1.2.1. Se på grafen
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#clustre-fra-tysk-graf">
+         2.1.2.2. Clustre fra tysk graf
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#norsk">
+       2.1.3. Norsk
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id2">
+         2.1.3.1. Se på grafen
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id3">
+         2.1.3.2. Clustre fra grafen
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="DHlab_logo_web_no_red.png" src="Legacy_notebooks/attachment:DHlab_logo_web_no_red.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import dhlab.graph_networkx_louvain as gnl</span>
+<span class="kn">import</span> <span class="nn">dhlab.legacy.nbtext</span> <span class="k">as</span> <span class="nn">nb</span>
+<span class="kn">from</span> <span class="nn">dhlab.module_update</span> <span class="kn">import</span> <span class="n">css</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">plot</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">5</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">)</span>
+<span class="n">plot_settings</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;smooth&quot;</span> <span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;figsize&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="s2">&quot;lw&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+<span class="c1">#import dhlab.module_update as mu</span>
+
+<span class="c1">#mu.update(&#39;graph_networkx_louvain&#39;)</span>
+
+<span class="kn">import</span> <span class="nn">dhlab.graph_networkx_louvain</span> <span class="k">as</span> <span class="nn">gnl</span>
+<span class="kn">from</span> <span class="nn">dhlab</span> <span class="kn">import</span> <span class="n">Ngram</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">css</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>@import url(http://fonts.googleapis.com/css?family=Lato|Philosopher|Montserrat|Source+Code+Pro|Merriweather|Shippori+Mincho|Istok+Web|Philosopher|Assistant:200,400,700);
+
+p {
+    font-size:1.3em;
+    font-family:serif;
+    line-height:1.4em;
+    color:#142850;
+}
+h1, h2, h3, h4 {
+    color:#27496d;
+}
+
+/*
+.prompt, .jp-InputPrompt, .jp-InputArea-prompt, .jp-OutputPrompt, .jp-OutputArea-prompt {
+    visibility: hidden; 
+}
+
+
+.jp-CodeCell .jp-Notebook-cell    {
+    margin-left:10%;
+    margin-right:5%;
+}
+
+
+.jp-InputArea, .jp-OutputArea {
+    margin-left:2.5em;
+    margin-right:2.5em;
+}
+*/
+
+
+body  {
+    margin:10%;
+    counter-reset: h1counter;
+
+}
+
+/* .jp-MarkdownOutput, .text_cell_render {
+
+    background-color:#FEFBF1;    
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0, 0.10);;
+} */
+
+
+h1:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    /*margin: 0 auto; This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 10px;
+    border-bottom:3px solid SlateGray; /* FireBrick; */
+}
+
+h2:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    /*margin: 0 auto; This will center the border. */
+    width: 30%; /* Change this to whatever width you want. */
+    padding-top: 10px;
+    border-bottom:2px solid SlateGray; /* FireBrick; */
+}
+
+</style></div></div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="n-gramdata">
+<h1>1. N-gramdata<a class="headerlink" href="#n-gramdata" title="Permalink to this headline">#</a></h1>
+<p>Data kan hentes fra <a class="reference external" href="https://www.nb.no/sp_tjenester/beta/ngram_1/trends#ngram/query?terms=demokrati%2C+diktatur&amp;lang=all&amp;case_sens=0&amp;freq=rel&amp;corpus=bok">NB N-gram</a> med kommandoen <code class="docutils literal notranslate"><span class="pre">nb_ngram(&lt;ord&gt;,</span> <span class="pre">periode)</span></code>. Dataene utgjør en <strong>dataramme</strong> som kan analyseres og plottes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">smooth</span></code> er et parameter for glatting. Forekomsten av et ord er til en viss grad styrt av tilfeldigheter, for eks. hvilke bøker som ble utgitt ett bestemt år: For å rette noe på denne skjevheten, «glattes» resultatene ut før de vises. Glatting vil si at relativfrekvensen for ett år beregnes som et gjennomsnitt av frekvensen i dette og et visst antall forutgående og etterfølgende år: En glatting på fire innebærer at resultatene for fire år før og fire år etter legges sammen med dem for det aktuelle året, delt på ni (antall år totalt). Dette gjør kurvene jevnere enn i rådataene hvor det er langt mer spisse topper.</p>
+<p><code class="docutils literal notranslate"><span class="pre">corpus</span></code> er satt til <em>bok</em> som default, skriv <code class="docutils literal notranslate"><span class="pre">corpus='avis'</span></code> for å søke i aviser.</p>
+<section id="plotting-av-trendlinjer">
+<h2>1.1. Plotting av trendlinjer<a class="headerlink" href="#plotting-av-trendlinjer" title="Permalink to this headline">#</a></h2>
+<p>Lag en figur med egendefinert (se over) kommando <code class="docutils literal notranslate"><span class="pre">plot(&lt;ngram</span> <span class="pre">dataramme&gt;)</span></code> eller bruk innebygd Python <code class="docutils literal notranslate"><span class="pre">&lt;ngram&gt;.plot(...)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ngram</span><span class="p">(</span><span class="n">words</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ammen&quot;</span><span class="p">],</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1930</span><span class="p">,</span> <span class="n">to_year</span><span class="o">=</span><span class="mi">2010</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4 a_N-gram_og_galakser_åpen_5_0.png" src="../_images/4 a_N-gram_og_galakser_åpen_5_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ngram</span><span class="p">(</span><span class="n">words</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;det, der&quot;</span><span class="p">],</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1810</span><span class="p">,</span> <span class="n">to_year</span><span class="o">=</span><span class="mi">2010</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">**</span><span class="n">plot_settings</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4 a_N-gram_og_galakser_åpen_6_0.png" src="../_images/4 a_N-gram_og_galakser_åpen_6_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="galakser">
+<h1>2. Galakser<a class="headerlink" href="#galakser" title="Permalink to this headline">#</a></h1>
+<p>Galaksene måler koblinger mellom ord, og kan brukes for å lage sett av ord til forskjellige formål, som for eksempel sentimentanalyse, eller stedsnavn.</p>
+<p>For engelsk og tysk er grunnlagsmaterialet <a class="reference external" href="https://books.google.com/ngrams/graph?content=democracy&amp;year_start=1800&amp;year_end=2000&amp;corpus=15&amp;smoothing=3&amp;share=&amp;direct_url=t1%3B%2Cdemocracy%3B%2Cc0">Google n-gram</a>.</p>
+<p>Kommanden er <code class="docutils literal notranslate"><span class="pre">make_graph(&lt;ord&gt;,</span> <span class="pre">lang=&lt;språk-kode&gt;)</span></code></p>
+<section id="definer-en-kobling">
+<h2>2.1. Definer en kobling<a class="headerlink" href="#definer-en-kobling" title="Permalink to this headline">#</a></h2>
+<section id="engelsk">
+<h3>2.1.1. Engelsk<a class="headerlink" href="#engelsk" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ice</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">make_graph</span><span class="p">(</span><span class="s1">&#39;ice&#39;</span><span class="p">,</span> <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;eng&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="nn">/home/larsm/projects/dhlab_projects/digital_tekstanalyse/4 a_N-gram_og_galakser_åpen.ipynb Cell 11</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="o">----&gt;</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/larsm/projects/dhlab_projects/digital_tekstanalyse/4</span><span class="si">%20a</span><span class="s1">_N-gram_og_galakser_%C3%A5pen.ipynb#X13sZmlsZQ%3D%3D?line=0&#39;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">ice</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">make_graph</span><span class="p">(</span><span class="s1">&#39;ice&#39;</span><span class="p">,</span> <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;eng&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/myconda10/lib/python3.10/site-packages/dhlab/legacy/nbtext.py:1802,</span> in <span class="ni">make_graph</span><span class="nt">(words, lang, cutoff, leaves)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1796</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">   </span><span class="mi">1797</span>     <span class="s1">&#39;terms&#39;</span><span class="p">:</span> <span class="n">words</span><span class="p">,</span> <span class="s1">&#39;corpus&#39;</span><span class="p">:</span> <span class="n">lang</span><span class="p">,</span> <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="n">cutoff</span><span class="p">,</span> <span class="s1">&#39;leaves&#39;</span><span class="p">:</span> <span class="n">leaves</span>
+<span class="g g-Whitespace">   </span><span class="mi">1798</span> <span class="p">}</span>
+<span class="g g-Whitespace">   </span><span class="mi">1799</span> <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1800</span>     <span class="s2">&quot;https://www.nb.no/sp_tjenester/beta/ngram_1/galaxies/query&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1801</span>     <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1802</span> <span class="k">return</span> <span class="n">make_graph_from_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/myconda10/lib/python3.10/site-packages/dhlab/legacy/nbtext.py:1812,</span> in <span class="ni">make_graph_from_result</span><span class="nt">(result)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1810</span> <span class="n">edgelist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1811</span> <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1812</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1813</span>     <span class="c1"># print(graph)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1814</span>     <span class="n">nodes</span> <span class="o">=</span> <span class="n">graph</span><span class="p">[</span><span class="s1">&#39;nodes&#39;</span><span class="p">]</span>
+
+<span class="nn">File ~/anaconda3/envs/myconda10/lib/python3.10/json/__init__.py:346,</span> in <span class="ni">loads</span><span class="nt">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">341</span>     <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">detect_encoding</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="s1">&#39;surrogatepass&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span> <span class="k">if</span> <span class="p">(</span><span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span>         <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
+<span class="g g-Whitespace">    </span><span class="mi">345</span>         <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">346</span>     <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span> <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">348</span>     <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONDecoder</span>
+
+<span class="nn">File ~/anaconda3/envs/myconda10/lib/python3.10/json/decoder.py:337,</span> in <span class="ni">JSONDecoder.decode</span><span class="nt">(self, s, _w)</span>
+<span class="g g-Whitespace">    </span><span class="mi">332</span> <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">_w</span><span class="o">=</span><span class="n">WHITESPACE</span><span class="o">.</span><span class="n">match</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">333</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Return the Python representation of ``s`` (a ``str`` instance</span>
+<span class="g g-Whitespace">    </span><span class="mi">334</span><span class="sd">     containing a JSON document).</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">337</span>     <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_decode</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="n">_w</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">end</span><span class="p">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span>     <span class="n">end</span> <span class="o">=</span> <span class="n">_w</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span>     <span class="k">if</span> <span class="n">end</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+
+<span class="nn">File ~/anaconda3/envs/myconda10/lib/python3.10/json/decoder.py:355,</span> in <span class="ni">JSONDecoder.raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span>     <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scan_once</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span> <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">355</span>     <span class="k">raise</span> <span class="n">JSONDecodeError</span><span class="p">(</span><span class="s2">&quot;Expecting value&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">err</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span> <span class="k">return</span> <span class="n">obj</span><span class="p">,</span> <span class="n">end</span>
+
+<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="se-pa-grafen">
+<h4>2.1.1.1. Se på grafen<a class="headerlink" href="#se-pa-grafen" title="Permalink to this headline">#</a></h4>
+<p>Grafer tegnes og analyseres med pakken <a class="reference external" href="https://networkx.github.io/">networkx</a>. Kommandoer er bygd over den pakken, og kommando for å vise grafen er <code class="docutils literal notranslate"><span class="pre">show_graph</span></code> fra modulen <code class="docutils literal notranslate"><span class="pre">graph_networkx_louvain</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gnl</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">eng</span><span class="o">.</span><span class="n">ngram</span><span class="p">,</span> <span class="n">spread</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">/home/larsm/projects/dhlab_projects/digital_tekstanalyse/4 a_N-gram_og_galakser_åpen.ipynb Cell 14</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="o">----&gt;</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/larsm/projects/dhlab_projects/digital_tekstanalyse/4</span><span class="si">%20a</span><span class="s1">_N-gram_og_galakser_%C3%A5pen.ipynb#X15sZmlsZQ%3D%3D?line=0&#39;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">gnl</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">eng</span><span class="o">.</span><span class="n">ngram</span><span class="p">,</span> <span class="n">spread</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/myconda10/lib/python3.10/site-packages/dhlab/legacy/graph_networkx_louvain.py:441,</span> in <span class="ni">show_graph</span><span class="nt">(G, spread, fontsize, deltax, deltay)</span>
+<span class="g g-Whitespace">    </span><span class="mi">440</span> <span class="k">def</span> <span class="nf">show_graph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">spread</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">deltax</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">deltay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">441</span>     <span class="k">return</span> <span class="n">draw_graph_centrality2</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">mcommunity</span><span class="p">(</span><span class="n">G</span><span class="p">),</span> <span class="n">k</span><span class="o">=</span><span class="n">spread</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">fontsize</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span>                                   <span class="n">deltax</span><span class="o">=</span><span class="n">deltax</span><span class="p">,</span> <span class="n">deltay</span><span class="o">=</span><span class="n">deltay</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/myconda10/lib/python3.10/site-packages/dhlab/legacy/graph_networkx_louvain.py:168,</span> in <span class="ni">mcommunity</span><span class="nt">(Graph, random)</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span> <span class="k">def</span> <span class="nf">mcommunity</span><span class="p">(</span><span class="n">Graph</span><span class="p">,</span> <span class="n">random</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">168</span>     <span class="n">G</span> <span class="o">=</span> <span class="n">Graph</span><span class="o">.</span><span class="n">to_undirected</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>     <span class="n">m_partition</span> <span class="o">=</span> <span class="n">community_louvain</span><span class="o">.</span><span class="n">best_partition</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span>     <span class="c1"># print(m_partition)</span>
+
+<span class="nn">File ~/anaconda3/envs/myconda10/lib/python3.10/site-packages/pandas/core/generic.py:5902,</span> in <span class="ni">NDFrame.__getattr__</span><span class="nt">(self, name)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5895</span> <span class="k">if</span> <span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">5896</span>     <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal_names_set</span>
+<span class="g g-Whitespace">   </span><span class="mi">5897</span>     <span class="ow">and</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span>
+<span class="g g-Whitespace">   </span><span class="mi">5898</span>     <span class="ow">and</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_accessors</span>
+<span class="g g-Whitespace">   </span><span class="mi">5899</span>     <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_info_axis</span><span class="o">.</span><span class="n">_can_hold_identifiers_and_holds_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5900</span> <span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">5901</span>     <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="ne">-&gt; </span><span class="mi">5902</span> <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="ne">AttributeError</span>: &#39;DataFrame&#39; object has no attribute &#39;to_undirected&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="clustre-fra-grafen">
+<h4>2.1.1.2. Clustre fra grafen<a class="headerlink" href="#clustre-fra-grafen" title="Permalink to this headline">#</a></h4>
+<p>Bruk kommando <code class="docutils literal notranslate"><span class="pre">show_communities</span></code> fra <code class="docutils literal notranslate"><span class="pre">gnl</span></code> for å se på clustre.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gnl</span><span class="o">.</span><span class="n">show_communities</span><span class="p">(</span><span class="n">eng</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>centralism-totalitarianism :  centralism, totalitarianism, absolutism, militarism, statism, dictatorship, localism, collectivism, unitarism, fascism, regimentation, regionalism
+
+democracy-secularism :  democracy, secularism, Democracy, atheism, ochlocracy, materialism, whiggism, Presidentialism, communalism, anticlericalism, shura
+
+constitutionalism-parliamentarism :  constitutionalism, parliamentarism, parliamentarianism, reformism, liberalism, federalism, legalism, republicanism, legality, presidentialism, politics, bourgeois, political
+
+autocracy-oligarchy :  autocracy, oligarchy, Autocracy, authoritarianism, serfdom, plutocracy, Aristocracy, despotism, Orthodoxy, feudalism, theocracy, aristocracy
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tysk">
+<h3>2.1.2. Tysk<a class="headerlink" href="#tysk" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ger</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">make_graph</span><span class="p">(</span><span class="s1">&#39;Demokratie&#39;</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s1">&#39;ger&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id1">
+<h4>2.1.2.1. Se på grafen<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gnl</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">ger</span><span class="p">,</span> <span class="n">spread</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4 a_N-gram_og_galakser_åpen_18_0.png" src="../_images/4 a_N-gram_og_galakser_åpen_18_0.png" />
+</div>
+</div>
+</section>
+<section id="clustre-fra-tysk-graf">
+<h4>2.1.2.2. Clustre fra tysk graf<a class="headerlink" href="#clustre-fra-tysk-graf" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gnl</span><span class="o">.</span><span class="n">show_communities</span><span class="p">(</span><span class="n">ger</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Demokratie-Präsidentialismus :  Demokratie, Präsidentialismus, Politikvermittlung, Parlamentarismus, Wahlen, Rätewesen
+
+Rechtsstaatlichkeit-Rechtstaatlichkeit :  Rechtsstaatlichkeit, Rechtstaatlichkeit, Menschenrechten, Menschenrechte, Gewaltenteilung, Sozialstaatlichkeit, Liberalität, Rechtssicherheit
+
+Ultramontanismus-Katholizismus :  Ultramontanismus, Katholizismus, Iesuitismus, Jesuitismus, Liberalismus
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="norsk">
+<h3>2.1.3. Norsk<a class="headerlink" href="#norsk" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g_is</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">make_graph</span><span class="p">(</span><span class="s1">&#39;demokrati&#39;</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s1">&#39;nob&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id2">
+<h4>2.1.3.1. Se på grafen<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gnl</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">g_is</span><span class="p">,</span> <span class="n">spread</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4 a_N-gram_og_galakser_åpen_25_0.png" src="../_images/4 a_N-gram_og_galakser_åpen_25_0.png" />
+</div>
+</div>
+</section>
+<section id="id3">
+<h4>2.1.3.2. Clustre fra grafen<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gnl</span><span class="o">.</span><span class="n">show_communities</span><span class="p">(</span><span class="n">g_is</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>respekt-åpenhet :  respekt, åpenhet, medbestemmelse, toleranse, tillit, ærlighet, forståelse, fleksibilitet, verdighet, innsyn, beundring, ydmykhet, innflytelse, samarbeid, dialog, fornuft, lojalitet, sympati, medvirkning, anerkjennelse, ryddighet, nysgjerrighet, ærbødighet, nærhet, raushet, høflighet, offentlighet, takknemlighet, medinnflytelse, påvirkning, medansvar, aktelse, omtanke
+
+frihet-rettferdighet :  frihet, rettferdighet, Frihet, menneskeverd, likhet, ansvar, selvstendighet, menneskerett, kjærlighet, rett, uavhengighet, Fred, integritet, Fedreland, Land, sannhet
+
+demokrati-menneskerettigheter :  demokrati, menneskerettigheter, ytringsfrihet, rettssikkerhet, diktatur, folkestyre, markedsøkonomi, menneskerettar, likebehandling, Demokrati, personvern, trosfrihet, religionsfrihet, flerpartisystem, rettsstat, sensur, miljø, pressefrihet, forfatning, tvang, sosial, organisasjonsfrihet, menneskeretter, politikk, privatisering, folkerett, terror, ensretting, ytringsfridom, parlamentarisme
+
+fred-fridom :  fred, fridom, rettferd, krig, forsoning, glede, nedrustning, orden, signing, ro, avspenning
+
+likestilling-likeverd :  likestilling, likeverd, solidaritet, mangfold, rettigheter, feminisme, kunnskap, deltakelse, gjensidig, likelønn, familiepolitikk, kvinnesak, kjønnsroller, integrering, kvinnekamp, frigjøring, kvinnefrigjøring
+
+velferd-trygghet :  velferd, trygghet, sikkerhet, omsorg, velstand, inkludering, helse, verdiskaping, liv, fellesskap, sysselsetting, trivsel, vekst
+
+sosialisme-kommunisme :  sosialisme, kommunisme, kristendom, Sosialisme, kapitalisme, liberalisme, fascisme, revolusjon, nazisme, konservatisme, planøkonomi, Kristendom
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tilbake til <a class="reference external" href="https://nbviewver.org/github/DH-LAB-NB/DHLAB/blob/master/DHLAB_ved_Nasjonalbiblioteket.ipynb">DHLAB ved Nasjonalbiblioteket</a></p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Legacy_notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Lars Magne Tungland<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
